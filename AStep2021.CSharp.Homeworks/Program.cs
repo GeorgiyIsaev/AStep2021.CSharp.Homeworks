@@ -10,7 +10,7 @@ namespace AStep2021.CSharp.HW01
     {
         static void Main(string[] args)
         {
-
+            Problem01();
 
         }
         static void Problem01()
@@ -27,6 +27,29 @@ namespace AStep2021.CSharp.HW01
             в случае, если в прямоугольнике нельзя разместить ни
             одного квадрата со стороной С (например, если зна-
             чение С превышает размер сторон прямоугольника).*/
+
+            int a, b, c;
+            a = IntRead("A");
+            b = IntRead("B");
+            c = IntRead("C");
+
+
+        }
+
+        static int IntRead(string nameval = "")
+        {
+            int val;        
+            try
+            {
+                Console.WriteLine("Введите число " + nameval);
+                val = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("OШИБКА ввода. Требуется ввести число!");
+                val = IntRead(nameval);
+            }
+            return val;
         }
 
 
