@@ -33,6 +33,26 @@ namespace AStep2021.CSharp.HW01
             b = IntRead("B");
             c = IntRead("C");
 
+            if (c<a && c < b)
+            {
+                int sRect = b * a;
+                int sSquare = c * c;
+                int countSquare = sRect / sSquare;
+                Console.WriteLine("Колличество квадратов со стронами С(" + c + ") в прямоугольнике АB(" + a + "," + b + ") равно:"+ countSquare);
+
+                int sSurplus = sRect - countSquare * sSquare;
+                Console.WriteLine("Площадь незанятой части прямоугольника: "+ sSurplus);
+
+
+
+
+            }
+            else
+            {
+                Console.WriteLine("В прямоугольнике со стронами АB("+a+"," +b+"),");
+                Console.WriteLine("нельзя разместить квадрат со строной С("+c+")");
+            }
+
 
         }
 
