@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AStep2021.CSharp.HW01
+namespace AStep2021.CSharp.HW01.InputOutputText
 {
     class Program
     {

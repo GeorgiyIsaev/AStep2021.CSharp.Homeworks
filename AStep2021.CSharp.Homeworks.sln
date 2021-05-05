@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW01", "AStep2021.CSharp.Homeworks\AStep2021.CSharp.HW01.csproj", "{81CF70AA-7CD2-4E3D-8574-E1AFC2E16EE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW01", "AStep2021.CSharp.HW01.InputOutputText\AStep2021.CSharp.HW01.InputOutputText.csproj", "{81CF70AA-7CD2-4E3D-8574-E1AFC2E16EE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
