@@ -8,21 +8,7 @@ namespace AStep2021.CSharp.HW01
 {
     class Program
     {
-        static int IntRead(string nameval = "")
-        {
-            int val;
-            try
-            {
-                Console.WriteLine("Введите число " + nameval);
-                val = Convert.ToInt32(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("OШИБКА ввода. Требуется ввести число!");
-                val = IntRead(nameval);
-            }
-            return val;
-        }
+    
 
         static void Main(string[] args)
         {
@@ -31,12 +17,12 @@ namespace AStep2021.CSharp.HW01
 
         }
         static void Problem01()
-        { 
-           /*Задача 01*/
-            int a, b, c;
-            a = IntRead("A");
-            b = IntRead("B");
-            c = IntRead("C");
+        {
+            /*Задача 01*/
+            uint a, b, c;
+            a = UIntRead("A");
+            b = UIntRead("B");
+            c = UIntRead("C");
 
             if (c<a && c < b)
             {
@@ -47,12 +33,12 @@ namespace AStep2021.CSharp.HW01
                 //    int sSurplus = sRect - countSquare * sSquare;
                 //    Console.WriteLine("Площадь незанятой части прямоугольника: "+ sSurplus);
 
-                int storonaA = a / c;
-                int storonaB = b / c;
-                int countSquareAB = storonaA * storonaB;
+                uint storonaA = a / c;
+                uint storonaB = b / c;
+                uint countSquareAB = storonaA * storonaB;
                 Console.WriteLine("Колличество квадратов со стронами С(" + c + ") в прямоугольнике АB(" + a + "," + b + ") равно:" + countSquareAB);
-                int sSurplus = sRect - countSquareAB * sSquare;
-                Console.WriteLine("Площадь незанятой части прямоугольника: " + sSurplus);
+                double sSurplus = sRect - countSquareAB * sSquare;
+                Console.WriteLine("Площадь незанятой части прямоугольника: " + Convert.ToInt32(sSurplus));
             }
             else
             {
@@ -60,6 +46,24 @@ namespace AStep2021.CSharp.HW01
                 Console.WriteLine("нельзя разместить квадрат со строной С("+c+")");
             }
         }
+        static uint UIntRead(string nameval = "")
+        {
+            uint val;
+            try
+            {
+                Console.WriteLine("Введите число " + nameval);
+                val = Convert.ToUInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("OШИБКА ввода. Требуется ввести число!");
+                val = UIntRead(nameval);
+            }
+            return val;
+        }
+
+
+        /*ЗАДАЧА 02*/
         static void Problem02()
         {
             double depositBank = 10000;
@@ -93,6 +97,12 @@ namespace AStep2021.CSharp.HW01
             return val;
         }
 
+
+        /*ЗАДАЧА 03*/
+        static void Problem03()
+        {
+
+        }
 
 
 
