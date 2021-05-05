@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{03F0B34F-0A64-40D0-B4A9-79D128BEB240}</ProjectGuid>
+    <ProjectGuid>{FEFA02C4-6134-4468-B4E4-E5E6855BAA12}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AStep2021.CSharp.HW02.MassivStringEnum</RootNamespace>
     <AssemblyName>AStep2021.CSharp.HW02.MassivStringEnum</AssemblyName>
@@ -93,9 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="HomeWork02Task.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
