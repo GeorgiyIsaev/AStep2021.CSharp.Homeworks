@@ -8,24 +8,27 @@ namespace AStep2021.CSharp.HW01
 {
     class Program
     {
-    
+
 
         static void Main(string[] args)
         {
             //Problem01();
             //Problem02();
-            Problem03();
+            //Problem03();
+            Problem04();
 
         }
+
+        /*Задача 01*/
         static void Problem01()
         {
-            /*Задача 01*/
+            
             uint a, b, c;
             a = UIntRead("A");
             b = UIntRead("B");
             c = UIntRead("C");
 
-            if (c<a && c < b)
+            if (c < a && c < b)
             {
                 uint sRect = b * a;
                 uint sSquare = c * c;
@@ -43,8 +46,8 @@ namespace AStep2021.CSharp.HW01
             }
             else
             {
-                Console.WriteLine("В прямоугольнике со стронами АB("+a+"," +b+"),");
-                Console.WriteLine("нельзя разместить квадрат со строной С("+c+")");
+                Console.WriteLine("В прямоугольнике со стронами АB(" + a + "," + b + "),");
+                Console.WriteLine("нельзя разместить квадрат со строной С(" + c + ")");
             }
         }
         static uint UIntRead(string nameval = "")
@@ -57,7 +60,7 @@ namespace AStep2021.CSharp.HW01
             }
             catch
             {
-                Console.WriteLine("OШИБКА ввода. Требуется ввести число!");
+                Console.WriteLine("OШИБКА ввода. Требуется ввести положительное число!");
                 val = UIntRead(nameval);
             }
             return val;
@@ -73,10 +76,10 @@ namespace AStep2021.CSharp.HW01
             do
             {
                 countMonth++;
-                depositBank += (depositBank * percent/100);
+                depositBank += (depositBank * percent / 100);
             }
             while (depositBank < 11000);
-            Console.WriteLine("Через "+ countMonth +" месяцев на счету будит " + depositBank);
+            Console.WriteLine("Через " + countMonth + " месяцев на счету будит " + depositBank);
 
 
         }
@@ -87,8 +90,8 @@ namespace AStep2021.CSharp.HW01
             {
                 Console.Write("Введите процент: ");
                 val = Convert.ToDouble(Console.ReadLine());
-                if(val<0 || val > 25)                
-                     throw new Exception();                
+                if (val < 0 || val > 25)
+                    throw new Exception();
             }
             catch
             {
@@ -123,7 +126,18 @@ namespace AStep2021.CSharp.HW01
 
         }
 
+        /*ЗАДАЧА 04*/
+        static void Problem04()
+        {
+            int A = Convert.ToInt32(UIntRead("A"));
+            int B = 0;
 
-
+            while (A> 0)
+            {
+                B = B * 10 + (A % 10);
+                A /= 10;               
+            }
+            Console.WriteLine("Переворачиваем: " + B);
+        }
     }
 }
