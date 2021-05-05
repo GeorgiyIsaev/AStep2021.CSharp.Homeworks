@@ -13,7 +13,8 @@ namespace AStep2021.CSharp.HW01
         static void Main(string[] args)
         {
             //Problem01();
-            Problem02();
+            //Problem02();
+            Problem03();
 
         }
         static void Problem01()
@@ -26,8 +27,8 @@ namespace AStep2021.CSharp.HW01
 
             if (c<a && c < b)
             {
-                int sRect = b * a;
-                int sSquare = c * c;
+                uint sRect = b * a;
+                uint sSquare = c * c;
                 //    int countSquare = sRect / sSquare;
                 //    Console.WriteLine("Колличество квадратов со стронами С(" + c + ") в прямоугольнике АB(" + a + "," + b + ") равно:"+ countSquare);
                 //    int sSurplus = sRect - countSquare * sSquare;
@@ -101,6 +102,24 @@ namespace AStep2021.CSharp.HW01
         /*ЗАДАЧА 03*/
         static void Problem03()
         {
+            int A = Convert.ToInt32(UIntRead("A"));
+            int B = Convert.ToInt32(UIntRead("B"));
+            if (A < B)
+            {
+                for (int i = A; i <= B; i++)
+                {
+                    for (int j = i; j > 0; j--)
+                    {
+                        Console.Write(i + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else
+            {
+                Console.WriteLine("ERROR: A должно быть < B");
+                Problem03();
+            }
 
         }
 
