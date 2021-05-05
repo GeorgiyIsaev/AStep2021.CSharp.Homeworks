@@ -8,9 +8,26 @@ namespace AStep2021.CSharp.HW01
 {
     class Program
     {
+        static int IntRead(string nameval = "")
+        {
+            int val;
+            try
+            {
+                Console.WriteLine("Введите число " + nameval);
+                val = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("OШИБКА ввода. Требуется ввести число!");
+                val = IntRead(nameval);
+            }
+            return val;
+        }
+
         static void Main(string[] args)
         {
-            Problem01();
+            //Problem01();
+            Problem02();
 
         }
         static void Problem01()
@@ -43,22 +60,39 @@ namespace AStep2021.CSharp.HW01
                 Console.WriteLine("нельзя разместить квадрат со строной С("+c+")");
             }
         }
-
-        static int IntRead(string nameval = "")
+        static void Problem02()
         {
-            int val;        
+            double depositBank = 10000;
+            double percent = percentRead();
+            int countMonth = 0;
+            do
+            {
+                countMonth++;
+                depositBank += (depositBank * percent/100);
+            }
+            while (depositBank < 11000);
+            Console.WriteLine("Через "+ countMonth +" месяцев на счету будит " + depositBank);
+
+
+        }
+        static double percentRead()
+        {
+            double val;
             try
             {
-                Console.WriteLine("Введите число " + nameval);
-                val = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Введите процент: ");
+                val = Convert.ToDouble(Console.ReadLine());
+                if(val<0 || val > 25)                
+                     throw new Exception();                
             }
             catch
             {
-                Console.WriteLine("OШИБКА ввода. Требуется ввести число!");
-                val = IntRead(nameval);
+                Console.WriteLine("OШИБКА ввода. Требуется ввести число от 0,0 до 25,0!");
+                val = percentRead();
             }
             return val;
         }
+
 
 
 
