@@ -10,6 +10,17 @@ namespace AStep2021.CSharp.HW02.MassivStringEnum
     {
         static void Main(string[] args)
         {
+            Task01();
         }
+
+        static void Task01()
+        {
+            /*1.	Сжать массив, удалив из него все 0 и, заполнить ос-
+            вободившиеся справа элементы значениями –1*/
+
+
+        }
+
+
     }
 }
