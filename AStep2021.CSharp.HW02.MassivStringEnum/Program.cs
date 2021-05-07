@@ -11,9 +11,9 @@ namespace AStep2021.CSharp.HW02.MassivStringEnum
         static void Main(string[] args)
         {
             //Task01();
-           //Task02();
-            Task03();
-            //Task04();
+            //Task02();
+            //Task03();
+            Task04();
 
 
             Console.ReadKey();
@@ -93,7 +93,7 @@ namespace AStep2021.CSharp.HW02.MassivStringEnum
 
         }
 
-        /*2.	3.	Написать программу, которая предлагает пользова-
+        /*3.	Написать программу, которая предлагает пользова-
         телю ввести число и считает, сколько раз это число
         встречается в массиве.*/
         static void Task03()
@@ -103,18 +103,18 @@ namespace AStep2021.CSharp.HW02.MassivStringEnum
             Random rand = new Random();
             for (int i = 0; i < massiv.Length; i++)
             {
-                massiv[i] = rand.Next(1, 3);
+                massiv[i] = rand.Next(1, 5);
                 Console.Write(massiv[i] + "\t");
             }
-            int val = IntRead("от 1 до 3");
+            int val = IntRead("от 1 до 5");
             int count = 0;
             for (int i = 0; i < massiv.Length; i++)
             {
                 if (val == massiv[i]) count++;
             }
 
-            Console.WriteLine("В этом массиве число "+val+" встречается " +count+ " раз.");
-           
+            Console.WriteLine("В этом массиве число " + val + " встречается " + count + " раз.");
+
         }
         static int IntRead(string nameval = "")
         {
@@ -123,16 +123,55 @@ namespace AStep2021.CSharp.HW02.MassivStringEnum
             {
                 Console.WriteLine("Введите число " + nameval);
                 val = Convert.ToInt32(Console.ReadLine());
-                if (val < 1 || val > 3) throw new Exception();
+                if (val < 1 || val > 5) throw new Exception();
             }
             catch
             {
-                Console.WriteLine("OШИБКА ввода. Требуется ввести от 1 до 3!");
+                Console.WriteLine("OШИБКА ввода. Требуется ввести от 1 до 5!");
                 val = IntRead(nameval);
             }
             return val;
         }
 
+        /* 4.	В двумерном массиве порядка M на N поменяйте
+        местами заданные столбцы.*/
+        static void Task04()
+        {
+            int[,] massiv = new int[2, 5];
+            int rows = massiv.GetUpperBound(0) + 1;
+            int columns = massiv.Length / rows;
 
+            Random rand = new Random();
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+
+                    massiv[i, j] = rand.Next(1, 5);
+                    Console.Write(massiv[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }  
+            
+            int rows1 = IntRead("(номер первого столбца 1::5)")-1;       
+            int rows2 = IntRead("(номер второго столбца 1::5)")-1;
+            for (int i = 0; i < rows; i++)
+            {
+
+                int temp = massiv[i, rows1];
+                massiv[i, rows1] = massiv[i, rows2];
+                massiv[i, rows2] = temp;  
+            }
+
+            Console.WriteLine();
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {                   
+                    Console.Write(massiv[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
