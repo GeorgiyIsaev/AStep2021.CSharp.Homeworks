@@ -167,8 +167,13 @@ namespace AStep2021.CSharp.HW02.MassivStringEnum
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
-                {                   
+                {
+                    if (j == rows1 || j == rows2)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow; // устанавливаем цвет     
+                    }                    
                     Console.Write(massiv[i, j] + "\t");
+                    Console.ResetColor(); // сбрасываем в стандартный
                 }
                 Console.WriteLine();
             }
