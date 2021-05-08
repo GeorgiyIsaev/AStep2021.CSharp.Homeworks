@@ -25,7 +25,7 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
          * Эллипс     * Ellipse*/
 
         int R;   
-        public Circle(int R
+        public Circle(int R)
         {
             this.R = R; 
         }
