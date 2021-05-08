@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 namespace AStep2021.CSharp.HW03.ClassAndStruct
 {
     
+    
+    
     public struct Article
     {
         public int idCod;
         public string name;
         public int price;
+        public ArticleType aType;
     }
     public struct Client
     {
@@ -20,6 +23,7 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         public string telefon;
         public int countOrder;
         public int fullOrderPrice;
+        public ClientType cType;
     }
     public struct RequestItem
     {
@@ -47,14 +51,25 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         }
     }
 
+    public enum ArticleType
+    {
+        low,
+        medium,
+        premium
+    }
+    public enum ClientType
+    {
+        common,
+        vip
+    }
+
 
 
     class Program
     {
         static void Main(string[] args)
         {
-            Article a = new Article();
-            a.
+           
         }
     }
 }
