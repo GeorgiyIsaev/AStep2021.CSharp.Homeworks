@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW03.Class
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW03.Task09.Wonder", "AStep2021.CSharp.HW03.Task09.Wonder\AStep2021.CSharp.HW03.Task09.Wonder.csproj", "{604521D7-F257-4992-9205-25889BA36FDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW04.Task01.Forms", "AStep2021.CSharp.HW04.Task01.Forms\AStep2021.CSharp.HW04.Task01.Forms.csproj", "{254F0E58-A7F7-47A7-90A9-1E782D128DFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{604521D7-F257-4992-9205-25889BA36FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{604521D7-F257-4992-9205-25889BA36FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{604521D7-F257-4992-9205-25889BA36FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{254F0E58-A7F7-47A7-90A9-1E782D128DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254F0E58-A7F7-47A7-90A9-1E782D128DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254F0E58-A7F7-47A7-90A9-1E782D128DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254F0E58-A7F7-47A7-90A9-1E782D128DFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
