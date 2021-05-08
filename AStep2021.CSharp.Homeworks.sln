@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW01.Input
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW02.MassivStringEnum", "AStep2021.CSharp.HW02.MassivStringEnum\AStep2021.CSharp.HW02.MassivStringEnum.csproj", "{F7A1F616-5F37-4413-BF32-09B9A20F0C2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW03.ClassAndStruct", "AStep2021.CSharp.HW03.ClassAndStruct\AStep2021.CSharp.HW03.ClassAndStruct.csproj", "{35093519-C67F-4263-9B58-35BE78BDF18F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F7A1F616-5F37-4413-BF32-09B9A20F0C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7A1F616-5F37-4413-BF32-09B9A20F0C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7A1F616-5F37-4413-BF32-09B9A20F0C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35093519-C67F-4263-9B58-35BE78BDF18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35093519-C67F-4263-9B58-35BE78BDF18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35093519-C67F-4263-9B58-35BE78BDF18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35093519-C67F-4263-9B58-35BE78BDF18F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
