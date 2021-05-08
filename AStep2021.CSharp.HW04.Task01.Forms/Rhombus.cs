@@ -30,6 +30,7 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
         {
             this.AB = AB;
             this.h= h;
+            name = "Ромб";
           
         }
 

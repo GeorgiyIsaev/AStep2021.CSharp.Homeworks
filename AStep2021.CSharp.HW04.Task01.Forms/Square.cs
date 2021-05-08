@@ -30,6 +30,7 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
         public Square(int AB)
         {
             this.AB = AB;
+            name = "Квадрат";
         }
 
         public override double PForm()

@@ -29,7 +29,8 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
         public Ellipse(int halfAxisA, int halfAxisB)
         {
             this.halfAxisA = halfAxisA;
-            this.halfAxisB = halfAxisB;        
+            this.halfAxisB = halfAxisB;
+            name = "Элипс";
         }
 
         public override double PForm()

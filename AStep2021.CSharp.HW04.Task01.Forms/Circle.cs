@@ -27,7 +27,8 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
         int R;   
         public Circle(int R)
         {
-            this.R = R; 
+            this.R = R;
+            name = "Круг";
         }
 
         public override double PForm()

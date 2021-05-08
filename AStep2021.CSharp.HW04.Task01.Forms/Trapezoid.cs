@@ -35,6 +35,7 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
             this.BC= BC;
             this.CD = CD;
             this.DA= DA;
+            name = "Трапеция";
         }
 
         public override double PForm()

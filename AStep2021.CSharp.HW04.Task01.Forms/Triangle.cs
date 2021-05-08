@@ -32,6 +32,7 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
             this.AB = AB;
             this.BC= BC;
             this.CA= CA;
+            name = "Треугольник";
         }
 
         public override double PForm()
