@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alexandria.cs" />
+    <Compile Include="Babylon.cs" />
+    <Compile Include="ColossusOfRhodes.cs" />
+    <Compile Include="Giza.cs" />
+    <Compile Include="Mausoleum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempleArtemis.cs" />
+    <Compile Include="ZeusOlympia.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
