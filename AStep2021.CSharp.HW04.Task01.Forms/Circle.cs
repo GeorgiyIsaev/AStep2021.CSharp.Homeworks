@@ -24,29 +24,24 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
    
          * Эллипс     * Ellipse*/
 
-        int AB;
-        int BC;
-        int CA;
-        public Circle(int AB,int BC,int CA)
+        int R;   
+        public Circle(int R
         {
-            this.AB = AB;
-            this.BC= BC;
-            this.CA= CA;
+            this.R = R; 
         }
 
         public override double PForm()
         {
-            double perimeter = AB + BC + CA;
+            //2πR
+            double perimeter = 2*3.14 * R;
             return perimeter;           
         }
 
         public override double SForm()
         {
-            //Формула Герона 
-            //S = √ p * (p − a) * (p − b) * (p − c)​,
-            //полупериметр p = (a + b + c) : 2
+            //S=πR²
             double p = PForm() / 2;
-            double square = Math.Sqrt(p * (p - AB) * p*(p - BC) * p*(p - CA));
+            double square = Math.Pow(3.14 * R,2);
             return square;
         }
     }
