@@ -26,27 +26,32 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
 
         int AB;
         int BC;
-        int CA;
-        public Trapezoid(int AB,int BC,int CA)
+        int CD;
+        int DA;
+
+        public Trapezoid(int AB,int BC,int CD, int DA)
         {
             this.AB = AB;
             this.BC= BC;
-            this.CA= CA;
+            this.CD = CD;
+            this.DA= DA;
         }
 
         public override double PForm()
         {
-            double perimeter = AB + BC + CA;
+            //P=a+b+c+d
+            double perimeter = AB + BC + CD + DA;
             return perimeter;           
         }
 
         public override double SForm()
         {
-            //Формула Герона 
-            //S = √ p * (p − a) * (p − b) * (p − c)​,
-            //полупериметр p = (a + b + c) : 2
-            double p = PForm() / 2;
-            double square = Math.Sqrt(p * (p - AB) * p*(p - BC) * p*(p - CA));
+            //S=½h(a+b)
+
+            //Площадь трапеции по 4 сторонам 
+            double square = ((AB+CD)/2) * 
+                Math.Sqrt(DA*DA - 
+                Math.Pow((Math.Pow((CD - AB),2) + BC* BC - DA*DA)/2* (CD - AB),2));
             return square;
         }
     }
