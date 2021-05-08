@@ -29,12 +29,23 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
 
        public override double PForm()
        {
-            return 1;
+            double perimeter = 0;
+            foreach (Form form in compositeForm)
+            {
+                perimeter += form.PForm();
+            }
+
+            return perimeter;
        }
 
         public override double SForm()
         {
-            return 1;
+            double square = 0;
+            foreach (Form form in compositeForm)
+            {
+                square += form.SForm();
+            }
+            return square;
         }
     }
 }

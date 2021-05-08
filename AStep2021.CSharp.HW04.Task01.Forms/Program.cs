@@ -23,10 +23,10 @@ namespace AStep2021.CSharp.HW04.Task01
 
             triangle.Print();
 
-            //triangle.PForm();
-            //triangle.SForm();
-            //Console.WriteLine("Треугольник S="+ Math.Round(triangle.SForm(),2) //обрезаем цифры после запятой
-            //    + " P=" + triangle.PForm());
+            triangle.PForm();
+            triangle.SForm();
+            Console.WriteLine(triangle.Name + " S=" + Math.Round(triangle.SForm(),2) //обрезаем цифры после запятой
+                + " P=" + triangle.PForm());
         }
     }
 }
