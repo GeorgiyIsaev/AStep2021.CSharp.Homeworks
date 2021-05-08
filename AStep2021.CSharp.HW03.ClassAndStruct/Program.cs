@@ -57,15 +57,16 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         }
         public void PrintRating()
         {
-            string[] nameThema = { "Программированиe", "Администрирование", "Дизайн" };
+            string[] nameThema = { "Программированиe", "Администрирование", "Дизайн и модели" };
 
             for (int i = 0; i < ratingMassive.GetUpperBound(0) + 1; i++)
             {
-                Console.Write(nameThema[i] + ": ");
+                Console.Write(nameThema[i] + ": \t");
                 for (int j = 0; j < ratingMassive[i].Length; j++)
                 {
                     Console.Write(ratingMassive[i][j] + " ");
                 }
+                Console.WriteLine();
             }
         }
     }
@@ -83,11 +84,11 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
             Random rand = new Random();
             for (int i = 0; i < 3; i++)
             {
-                int tempCountRatting = rand.Next(5, 10);
-                int rattingIt = rand.Next(4, 5);
+                int tempCountRatting = rand.Next(2, 15);           
                 for (int j = 0; j < tempCountRatting; j++)
                 {
-                    student.SettRating(i, rattingIt);
+                    //int rattingIt = rand.Next(4, 5);
+                    student.SettRating(i, rand.Next(4, 6));
                 }
             }
             student.PrintRating();
