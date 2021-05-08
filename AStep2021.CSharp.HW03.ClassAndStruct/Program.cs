@@ -14,18 +14,13 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         string patronymic;
         string group;
         int age;
-        public int[][] ratingMassive;
+        public int[][] ratingMassive = new int[3][] { new int[0], new int[0], new int[0] };
 
         public Student(string surname, string name, string patronymic = "")
         {
             this.surname = surname;
             this.name = name;
-            this.patronymic = patronymic;
-
-            int[][] ratingMassive = new int[3][];
-            ratingMassive[0] = new int[0];
-            ratingMassive[1] = new int[0];
-            ratingMassive[2] = new int[0];
+            this.patronymic = patronymic;        
         }
         public void SetGroup(string val) => group = val;
         public void SetAge(int val) => age = val;
@@ -42,11 +37,15 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
             int[][] ratingTemp = new int[3][];
             for (int i = 0; i < 3; i++)
             {
-                if (i == inedexTheme) ratingTemp[inedexTheme] = new int[ratingMassive[inedexTheme].Length + 1];
-                else ratingTemp[i] = new int[ratingMassive[i].Length];
+                
+                    if (i == inedexTheme) ratingTemp[inedexTheme] = new int[ratingMassive[inedexTheme].Length + 1];
+                    else ratingTemp[i] = new int[ratingMassive[i].Length];
+               
             }
+            int a = ratingMassive.GetUpperBound(0);
             for (int i = 0; i < ratingMassive.GetUpperBound(0) + 1; i++)
             {
+               int b = ratingMassive[i].Length;
                 for (int j = 0; j < ratingMassive[i].Length; j++)
                 {
                     ratingTemp[i][j] = ratingMassive[i][j];
@@ -58,7 +57,7 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         }
         public void PrintRating()
         {
-            string[] nameThema = { "Программированиe", "Фдминистрирование", "Дизайн" };
+            string[] nameThema = { "Программированиe", "Администрирование", "Дизайн" };
 
             for (int i = 0; i < ratingMassive.GetUpperBound(0) + 1; i++)
             {
