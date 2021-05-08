@@ -25,13 +25,11 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
          * Эллипс     * Ellipse*/
 
         int AB;
-        int CD;
-        int CA;
-        public Rectangle(int AB,int CD,int CA)
+        int CD;     
+        public Rectangle(int AB,int CD)
         {
             this.AB = AB;
-            this.CD = CD;
-            this.CA= CA;
+            this.CD = CD;          
             name = "Прямоугольник";
         }
 

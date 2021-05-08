@@ -47,14 +47,14 @@
     <Compile Include="Form.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Square.cs" />
-    <Compile Include="Rhombus.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Parallelogram.cs" />
-    <Compile Include="Trapezoid.cs" />
-    <Compile Include="Circle.cs" />
-    <Compile Include="Ellipse.cs" />
-    <Compile Include="Triangle.cs" />
+    <Compile Include="forms\Square.cs" />
+    <Compile Include="forms\Rhombus.cs" />
+    <Compile Include="forms\Rectangle.cs" />
+    <Compile Include="forms\Parallelogram.cs" />
+    <Compile Include="forms\Trapezoid.cs" />
+    <Compile Include="forms\Circle.cs" />
+    <Compile Include="forms\Ellipse.cs" />
+    <Compile Include="forms\Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

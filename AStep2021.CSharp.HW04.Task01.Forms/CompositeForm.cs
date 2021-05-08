@@ -15,11 +15,15 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
         public void addForm(Form form){
             compositeForm.Add(form);
         }
-        void Print()
+        public void Print()
         {
-            foreach(Form form in compositeForm)
+            Console.WriteLine("Композитная фигура состоит из: ");
+            int count = 1;
+
+            foreach (Form form in compositeForm)
             {
-                //form
+                Console.WriteLine((count++) + ". " + form.Name +
+                    " P="+ Math.Round(form.PForm()) +" S="+ Math.Round(form.SForm()));
             }
         }
 
