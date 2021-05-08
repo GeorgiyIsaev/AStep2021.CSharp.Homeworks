@@ -14,7 +14,7 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         public int idCod;
         public string name;
         public int price;
-        public ArticleType aType;
+        public ArticleType articleType;
     }
     public struct Client
     {
@@ -23,7 +23,7 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         public string telefon;
         public int countOrder;
         public int fullOrderPrice;
-        public ClientType cType;
+        public ClientType clientType;
     }
     public struct RequestItem
     {
@@ -36,6 +36,7 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         public Client client;
         public string data;
         public List<Article> articles;
+        public PayType payType;
 
         public int fulPrice
         {
@@ -62,7 +63,12 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
         common,
         vip
     }
-
+    public enum PayType
+    {
+        cash, 
+        card, 
+        check
+    }
 
 
     class Program
