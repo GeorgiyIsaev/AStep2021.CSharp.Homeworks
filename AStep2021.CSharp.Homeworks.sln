@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW02.Massi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW03.ClassAndStruct", "AStep2021.CSharp.HW03.ClassAndStruct\AStep2021.CSharp.HW03.ClassAndStruct.csproj", "{35093519-C67F-4263-9B58-35BE78BDF18F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW03.Task09.Wonder", "AStep2021.CSharp.HW03.Task09.Wonder\AStep2021.CSharp.HW03.Task09.Wonder.csproj", "{604521D7-F257-4992-9205-25889BA36FDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{35093519-C67F-4263-9B58-35BE78BDF18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35093519-C67F-4263-9B58-35BE78BDF18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35093519-C67F-4263-9B58-35BE78BDF18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604521D7-F257-4992-9205-25889BA36FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604521D7-F257-4992-9205-25889BA36FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604521D7-F257-4992-9205-25889BA36FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604521D7-F257-4992-9205-25889BA36FDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
