@@ -12,7 +12,8 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
     {
         static void Main(string[] args)
         {
-            Task08();
+            //Task08();
+            Task10();
         }
 
         static void Task08()
@@ -33,6 +34,38 @@ namespace AStep2021.CSharp.HW03.ClassAndStruct
                 }
             }
             student.PrintRating();
+        }
+
+        static void Task10()
+        {
+            int[] Cyties = new int[]
+            {
+                England.London.Population,
+                Russia.Moscow.Population,
+                China.Beijing.Population
+            };
+
+
+            if(Russia.Moscow.Population > England.London.Population)
+            {
+                Console.WriteLine("Население г." + Russia.Moscow.name + " больше населния г." + England.London.name );
+            }
+            else
+            {
+                Console.WriteLine("Население г." + Russia.Moscow.name + " меньше населния г." + England.London.name);
+            }
+
+            if (Russia.Moscow.Population > China.Beijing.Population)
+            {
+                Console.WriteLine("Население г." + Russia.Moscow.name + " больше населния г." + China.Beijing.name);
+            }
+            else
+            {
+                Console.WriteLine("Население г." + Russia.Moscow.name + " меньше населния г." + China.Beijing.name);
+            }
+
+
+            Console.ReadKey();
         }
 
     }
