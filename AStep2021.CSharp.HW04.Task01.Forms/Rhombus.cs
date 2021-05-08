@@ -24,29 +24,26 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
    
          * Эллипс     * Ellipse*/
 
-        int AB;
-        int BC;
-        int CA;
-        public Rhombus(int AB,int BC,int CA)
+        int AB;     
+        int h;
+        public Rhombus(int AB,int h)
         {
             this.AB = AB;
-            this.BC= BC;
-            this.CA= CA;
+            this.h= h;
+          
         }
 
         public override double PForm()
         {
-            double perimeter = AB + BC + CA;
+            //P=4a
+            double perimeter = AB * 4;
             return perimeter;           
         }
 
         public override double SForm()
         {
-            //Формула Герона 
-            //S = √ p * (p − a) * (p − b) * (p − c)​,
-            //полупериметр p = (a + b + c) : 2
-            double p = PForm() / 2;
-            double square = Math.Sqrt(p * (p - AB) * p*(p - BC) * p*(p - CA));
+            //S=ah
+            double square = AB *h;
             return square;
         }
     }
