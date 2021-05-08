@@ -6,7 +6,7 @@ namespace Giza
     {
         public static void Show()
         {
-            Console.WriteLine("2. Great Pyramid of Giza");
+            Console.WriteLine("Great Pyramid of Giza");
         }
     }
 }

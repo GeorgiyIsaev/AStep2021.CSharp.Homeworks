@@ -6,7 +6,7 @@ namespace Babylon
     {
         public static void Show()
         {
-            Console.WriteLine("3. Hanging Gardens of Babylon");
+            Console.WriteLine("Hanging Gardens of Babylon");
         }
     }
 }

@@ -6,7 +6,7 @@ namespace ColossusOfRhodes
     {
         public static void Show()
         {
-            Console.WriteLine("1. Colossus of Rhodes");
+            Console.WriteLine("Colossus of Rhodes");
         }
     }
 }

@@ -6,7 +6,7 @@ namespace ZeusOlympia
     {
         public static void Show()
         {
-            Console.WriteLine("6. Statue of Zeus at Olympia");
+            Console.WriteLine("Statue of Zeus at Olympia");
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Alexandria
     {
         public static void Show()
         {
-            Console.WriteLine("4. Lighthouse of Alexandria");
+            Console.WriteLine("Lighthouse of Alexandria");
         }
     }
 }

@@ -6,7 +6,7 @@ namespace TempleArtemis
     {
         public static void Show()
         {
-            Console.WriteLine("7. Temple of Artemis at Ephesus");
+            Console.WriteLine("Temple of Artemis at Ephesus");
         }
     }
 }
