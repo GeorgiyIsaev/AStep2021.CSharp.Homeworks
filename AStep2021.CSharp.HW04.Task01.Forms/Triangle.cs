@@ -46,7 +46,7 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
             //S = √ p * (p − a) * (p − b) * (p − c)​,
             //полупериметр p = (a + b + c) : 2
             double p = PForm() / 2;
-            double square = Math.Sqrt(p * (p - AB) * p(p - BC) * p(p - CA));
+            double square = Math.Sqrt(p * (p - AB) * p*(p - BC) * p*(p - CA));
             return square;
         }
     }
