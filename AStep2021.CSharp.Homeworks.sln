@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW05.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW05.Task02.EquationSystem", "AStep2021.CSharp.HW05.Task02.EquationSystem\AStep2021.CSharp.HW05.Task02.EquationSystem.csproj", "{69BAD30E-6017-42C8-8886-7F0E99F99985}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW05.Task03.Complex", "AStep2021.CSharp.HW05.Task03.Complex\AStep2021.CSharp.HW05.Task03.Complex.csproj", "{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{69BAD30E-6017-42C8-8886-7F0E99F99985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69BAD30E-6017-42C8-8886-7F0E99F99985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69BAD30E-6017-42C8-8886-7F0E99F99985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
