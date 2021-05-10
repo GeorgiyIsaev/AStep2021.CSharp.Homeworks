@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW03.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW04.Task01.Forms", "AStep2021.CSharp.HW04.Task01.Forms\AStep2021.CSharp.HW04.Task01.Forms.csproj", "{254F0E58-A7F7-47A7-90A9-1E782D128DFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW04.Task02.Products", "AStep2021.CSharp.HW04.Task02.Products\AStep2021.CSharp.HW04.Task02.Products.csproj", "{9B881D2A-3C38-4FAC-BC6F-E54B87F67A6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{254F0E58-A7F7-47A7-90A9-1E782D128DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{254F0E58-A7F7-47A7-90A9-1E782D128DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{254F0E58-A7F7-47A7-90A9-1E782D128DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B881D2A-3C38-4FAC-BC6F-E54B87F67A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B881D2A-3C38-4FAC-BC6F-E54B87F67A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B881D2A-3C38-4FAC-BC6F-E54B87F67A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B881D2A-3C38-4FAC-BC6F-E54B87F67A6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
