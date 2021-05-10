@@ -6,57 +6,44 @@ using System.Threading.Tasks;
 
 namespace AStep2021.CSharp.HW05.Task02.EquationSystem
 {
-    public static class LinearEquation
+    public class LinearEquation
     {
-        static double A1;
-        static double B1;
-        static double A2;
-        static double B2;
+        double A1;
+        double B1;
+        public override string ToString()
+        {
+            string str = A1 + "*X + " + B1 + "*Y = 0";
+            return str;
+        }
 
-        static double X;
-        static double Y;
-
-        public static bool Parse(string valStr)
+        public static bool Parse(string valStr, LinearEquation linear)
         {
             string[] separator = { " ", "," };
             string[] lineItem = valStr.Split(separator, StringSplitOptions.RemoveEmptyEntries);
             try
             {
-                A1 = Convert.ToInt32(lineItem[0]);
-                B1 = Convert.ToInt32(lineItem[1]);
-                A2 = Convert.ToInt32(lineItem[2]);
-                B2 = Convert.ToInt32(lineItem[3]);
+                linear.A1 = Convert.ToInt32(lineItem[0]);
+                linear.B1 = Convert.ToInt32(lineItem[1]);           
             }
             catch
             {
                 return false;
             }
             return true;
-        }
-        static public string Info()
+        }    
+        static public void EquationSystem(LinearEquation linear1, LinearEquation linear2)
         {
-            string str = A1 + "*X + " + B1 + "*Y = 0";
-            str += "\n";
-            str += A2 + "*X + " + B2 + "*Y = 0";
-            return str;
-        }
-
-
-        static public void Result()
-        {
-            double delta = A1 * B1 - A2 * B2;
-            if(delta != 0)
+            double delta = linear1.A1 * linear1.B1 - linear2.A1 * linear2.B1;
+            if (delta != 0)
             {
-                X = 0; Y = 0;
-                Console.WriteLine("X = "+ X + " Y = " + Y);
-
+                Console.WriteLine("Уравнение имеет одно решение:");
+                Console.WriteLine("X = " + 0 + " Y = " + 0);
             }
             else
             {
                 Console.WriteLine("Система уравнений имеет бесконечно множество решений");
-            } 
+            }
         }
-
 
     }
 
@@ -65,22 +52,30 @@ namespace AStep2021.CSharp.HW05.Task02.EquationSystem
     {
         static void Main(string[] args)
         {
-            ReadStr();
-            Console.ReadKey();
-      
+            LinearEquation linear1 = new LinearEquation();
+            LinearEquation linear2 = new LinearEquation();
+            ReadStr(linear1);
+            Console.WriteLine("Уравнения 1: \t" + linear1);
+            ReadStr(linear2);
+            Console.WriteLine("Уравнения 2: \t" + linear2);
 
+            Console.WriteLine("\nСистема Уравнений:");
+            Console.WriteLine("Уравнения 1: \t" + linear1);
+            Console.WriteLine("Уравнения 2: \t" + linear2);
+
+            LinearEquation.EquationSystem(linear1, linear2);
+            Console.ReadKey();    
 
         }
-        static void ReadStr()
+        static void ReadStr(LinearEquation linear)
         {
-            Console.WriteLine("Введите четыри числа через пробел или через запяту:");
+            Console.WriteLine("Введите два числа через пробел или через запяту:");
             string tempStr = Console.ReadLine();
-            if (!LinearEquation.Parse(tempStr))
+            if (!LinearEquation.Parse(tempStr, linear))
             {
                 Console.WriteLine("ERROR: Не вернный ввод!");
-                ReadStr();
-            }
-            Console.WriteLine("Система уравнения:\n" + LinearEquation.Info());
-        }
+                ReadStr(linear);
+            }            
+        }       
     }
 }
