@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW05.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW05.Task03.Complex", "AStep2021.CSharp.HW05.Task03.Complex\AStep2021.CSharp.HW05.Task03.Complex.csproj", "{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW05.Task04.Fraction", "AStep2021.CSharp.HW05.Task04.Fraction\AStep2021.CSharp.HW05.Task04.Fraction.csproj", "{BDEEE6AF-6C00-43CF-85AE-A80B92E8C87A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0663B2E1-47C1-48CC-8B26-4F9EDA2843F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEEE6AF-6C00-43CF-85AE-A80B92E8C87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEEE6AF-6C00-43CF-85AE-A80B92E8C87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEEE6AF-6C00-43CF-85AE-A80B92E8C87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEEE6AF-6C00-43CF-85AE-A80B92E8C87A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
