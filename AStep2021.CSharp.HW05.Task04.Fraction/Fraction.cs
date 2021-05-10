@@ -81,6 +81,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
                a.y * b.y);
         }
      
+        /*Операторы преобразования*/
         public static implicit operator Fraction(int x)
         {
             return new Fraction(x, 1);
