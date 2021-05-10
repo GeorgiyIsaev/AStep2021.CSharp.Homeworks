@@ -24,7 +24,6 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
             string valStr = x +"/" + y;
             return valStr;
         }
-
         public void Reduction()
         {
             int nod = Nod();
@@ -54,7 +53,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         }
 
 
-
+        /*Математика*/
         public static Fraction operator *(Fraction a, Fraction b)
         {
             return new Fraction(
@@ -116,5 +115,31 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         }
 
 
+        /*Сравнения*/
+     
+        public static bool operator ==(Fraction a, Fraction b)
+        {
+            return ((a.x * b.y) == (b.x * a.y));
+        }
+        public static bool operator !=(Fraction a, Fraction b)
+        {
+            return !(a == b);
+        }
+        public static bool operator >(Fraction a, Fraction b)
+        {
+            return ((a.x * b.y) > (b.x * a.y));
+        }
+        public static bool operator <(Fraction a, Fraction b)
+        {
+            return !(a > b);
+        }
+        public static bool operator <=(Fraction a, Fraction b)
+        {
+            return ((a.x * b.y) <= (b.x * a.y));
+        }      
+        public static bool operator >=(Fraction a, Fraction b)
+        {
+            return !(a <= b);
+        }
     }
 }
