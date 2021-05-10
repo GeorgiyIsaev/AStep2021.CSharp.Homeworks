@@ -21,7 +21,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         public override string ToString()
         {
             Reduction();
-            string valStr = x + "/" + y;
+            string valStr = "("+x + "/" + y+")";
             return valStr;
         }
         public void Reduction()
@@ -81,40 +81,46 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
                a.y * b.y);
         }
 
-        public static Fraction operator *(double a, Fraction b)
-        {
-            Fraction f = new Fraction(b.y, b.y);
-            return f * b;
+        //public static Fraction operator *(int a, Fraction b)
+        //{
+        //    Fraction f = new Fraction(b.y, b.y);
+        //    return f * b;
 
-        }
-        public static Fraction operator *(Fraction b, double a)
-        {
-            return a * b;
-        }
+        //}
+        //public static Fraction operator *(Fraction b, int a)
+        //{
+        //    return a * b;
+        //}
 
-        public static Fraction operator -(Fraction a, double b)
-        {
-            Fraction f = new Fraction(a.y, a.y);
-            return a - f;
-        }
-        public static Fraction operator -(double b, Fraction a)
-        {
-            Fraction f = new Fraction(a.y, a.y);
-            return f - a;
-        }
+        //public static Fraction operator -(Fraction a, int b)
+        //{
+        //    Fraction f = new Fraction(a.y, a.y);
+        //    return a - f;
+        //}
+        //public static Fraction operator -(int b, Fraction a)
+        //{
+        //    Fraction f = new Fraction(a.y, a.y);
+        //    return f - a;
+        //}
 
-        public static Fraction operator +(Fraction a, double b)
+        //public static Fraction operator +(Fraction a, int b)
+        //{
+        //    Fraction f = new Fraction(a.y, a.y);
+        //    return a + f;
+        //}
+        //public static Fraction operator +(int b, Fraction a)
+        //{
+        //    Fraction f = new Fraction(a.y, a.y);
+        //    return f + a;
+        //}
+        public static implicit operator Fraction(int x)
         {
-            Fraction f = new Fraction(a.y, a.y);
-            return a + f;
+            return new Fraction(x, 1);
         }
-        public static Fraction operator +(double b, Fraction a)
-        {
-            Fraction f = new Fraction(a.y, a.y);
-            return f + a;
+        public static implicit operator Fraction(double x)
+        {        
+            return new Fraction (Convert.ToInt32(1000 * x),1000);
         }
-
-
         /*Сравнения*/
 
         public static bool operator ==(Fraction a, Fraction b)
