@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AStep2021.CSharp.HW05.Task04.Fraction
 {
-    
+
     class Fraction
     {
         private int x;
@@ -21,18 +21,19 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         public override string ToString()
         {
             Reduction();
-            string valStr = x +"/" + y;
+            string valStr = x + "/" + y;
             return valStr;
         }
         public void Reduction()
         {
             int nod = Nod();
             Console.WriteLine(this);
-            if (nod != 0) {
+            if (nod != 0)
+            {
                 x /= nod;
-                y /= nod;             
+                y /= nod;
                 Reduction();
-            }           
+            }
         }
         private int Nod()
         {
@@ -85,7 +86,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         {
             Fraction f = new Fraction(b.y, b.y);
             return f * b;
-             
+
         }
         public static Fraction operator *(Fraction b, double a)
         {
@@ -98,7 +99,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
             return a - f;
         }
         public static Fraction operator -(double b, Fraction a)
-        {          
+        {
             Fraction f = new Fraction(a.y, a.y);
             return f - a;
         }
@@ -108,7 +109,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
             Fraction f = new Fraction(a.y, a.y);
             return a + f;
         }
-        public static Fraction operator +( double b, Fraction a)
+        public static Fraction operator +(double b, Fraction a)
         {
             Fraction f = new Fraction(a.y, a.y);
             return f + a;
@@ -116,7 +117,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
 
 
         /*Сравнения*/
-     
+
         public static bool operator ==(Fraction a, Fraction b)
         {
             return ((a.x * b.y) == (b.x * a.y));
@@ -136,10 +137,20 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         public static bool operator <=(Fraction a, Fraction b)
         {
             return ((a.x * b.y) <= (b.x * a.y));
-        }      
+        }
         public static bool operator >=(Fraction a, Fraction b)
         {
             return !(a <= b);
+        }
+
+        /*Оператор true и false (Будит true  если число положительное)*/
+        public static bool operator false(Fraction a)
+        {
+            return ((a.x <= 0 && a.y >= 0) || (a.x >= 0 && a.y <= 0));
+        }
+        public static bool operator true(Fraction a)
+        {
+            return ((a.x >= 0 && a.y >= 0) || (a.x <= 0 && a.y <= 0));
         }
     }
 }
