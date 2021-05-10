@@ -15,7 +15,14 @@ namespace AStep2021.CSharp.HW05.Task03.Complex
 
         public override string ToString()
         {
-            string valStr = Math.Round(x, 2) + " + i" + y;
+            double tempY = y;
+            string znak = "+";
+            if (y < 0)
+            {
+                tempY = y * -1;
+                znak = "-";
+            }
+            string valStr = Math.Round(x, 2) + znak + "i" + Math.Round(tempY, 2);
             return valStr;
         }
 
