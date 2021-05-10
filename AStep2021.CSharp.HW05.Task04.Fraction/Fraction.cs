@@ -80,39 +80,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
                a.x * b.y + b.x * a.y,
                a.y * b.y);
         }
-
-        //public static Fraction operator *(int a, Fraction b)
-        //{
-        //    Fraction f = new Fraction(b.y, b.y);
-        //    return f * b;
-
-        //}
-        //public static Fraction operator *(Fraction b, int a)
-        //{
-        //    return a * b;
-        //}
-
-        //public static Fraction operator -(Fraction a, int b)
-        //{
-        //    Fraction f = new Fraction(a.y, a.y);
-        //    return a - f;
-        //}
-        //public static Fraction operator -(int b, Fraction a)
-        //{
-        //    Fraction f = new Fraction(a.y, a.y);
-        //    return f - a;
-        //}
-
-        //public static Fraction operator +(Fraction a, int b)
-        //{
-        //    Fraction f = new Fraction(a.y, a.y);
-        //    return a + f;
-        //}
-        //public static Fraction operator +(int b, Fraction a)
-        //{
-        //    Fraction f = new Fraction(a.y, a.y);
-        //    return f + a;
-        //}
+     
         public static implicit operator Fraction(int x)
         {
             return new Fraction(x, 1);
