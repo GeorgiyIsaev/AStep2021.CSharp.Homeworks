@@ -16,7 +16,7 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
             Fraction f1 = f * a;
             Console.WriteLine($"{f} * {a} = {f1}");
             Fraction f2 = a * f;
-            Console.WriteLine($"{a} * {f1} = {f2}");
+            Console.WriteLine($"{a} * {f} = {f2}");
             double d = 1.5;
             Fraction f3 = f + d;
             Console.WriteLine($"{f} * {d} = {f3}");
