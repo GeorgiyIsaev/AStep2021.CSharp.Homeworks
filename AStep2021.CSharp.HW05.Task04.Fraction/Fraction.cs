@@ -26,9 +26,8 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         }
         public void Reduction()
         {
-            int nod = Nod();
-            Console.WriteLine(this);
-            if (nod != 0)
+            int nod = Nod();          
+            if (nod > 1)
             {
                 x /= nod;
                 y /= nod;
@@ -37,20 +36,20 @@ namespace AStep2021.CSharp.HW05.Task04.Fraction
         }
         private int Nod()
         {
-            x = Math.Abs(x);
-            y = Math.Abs(y);
-            while (y != 0 && x != 0)
+            int a = Math.Abs(x);
+            int b = Math.Abs(y);
+            int min;
+            if (a > b) min = b;
+            else min = a;
+            int i = min;
+            int c = 0;
+            while (i > 0 && c == 0)
             {
-                if (x % y > 0)
-                {
-                    var temp = x;
-                    x = y;
-                    y = temp % y;
-                }
-                else break;
+                if ((a % i == 0) && (b % i == 0))
+                    c = i;
+                i--;
             }
-            if (y != 0 && x != 0) return y;
-            return 0;
+            return c;          
         }
 
 
