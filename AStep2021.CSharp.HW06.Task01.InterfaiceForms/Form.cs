@@ -12,5 +12,11 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         public string Name => name;
         abstract public double SForm();
         abstract public double PForm();
+
+        public virtual void Print()
+        {
+            Console.WriteLine(Name +" P=" + Math.Round(PForm()) + " S=" + Math.Round(SForm()));
+            
+        }
     }
 }

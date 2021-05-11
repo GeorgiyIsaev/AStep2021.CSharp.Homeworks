@@ -11,11 +11,11 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         //Сторон, Площадь, Периметр.
     class SimpleAngle : Form
     {
-        int h;
+        //int h;
         int baseAB;
         int CountSide;
 
-        public SimpleAngle(int h,        int baseAB,    int CountSide)
+        public SimpleAngle(int baseAB,    int CountSide)
         {
             this.h= h;
             this.baseAB=baseAB;            
