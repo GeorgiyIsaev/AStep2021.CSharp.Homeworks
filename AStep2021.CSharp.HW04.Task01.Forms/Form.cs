@@ -8,7 +8,7 @@ namespace AStep2021.CSharp.HW04.Task01.Forms
 {
     abstract class Form
     {
-        protected string name = "Фигура";
+        protected string name { get; set; } = "Фигура";
         public string Name => name;
         abstract public double SForm();
         abstract public double PForm();
