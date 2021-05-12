@@ -10,6 +10,25 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
     {
         static void Main(string[] args)
         {
+            try
+            {
+                Money money1 = new Money();
+                Money money2 = new Money();
+                Money money3 = new Money();
+
+                money1.add(100);
+                money2.add(100,50);
+                money3.add(100,400);
+
+                Console.WriteLine($"money1={money1} money2={money2} money3={money3}");
+
+               
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

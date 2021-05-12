@@ -28,11 +28,15 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
             if (rub < 0) throw new Exception("Банкрот");
         }
 
-        public void add(int rub, int kop)
+        public void add(int rub, int kop = 0)
         {
             this.rub += rub;
             this.kop += kop;
             reset();
+        }
+        public override string ToString()
+        {
+            return (rub.ToString() + " " + kop.ToString());
         }
 
         /*Операции*/
