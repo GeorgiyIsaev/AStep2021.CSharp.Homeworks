@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW06.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW07.Task01.TryCatch", "AStep2021.CSharp.HW07.Task01.TryCatch\AStep2021.CSharp.HW07.Task01.TryCatch.csproj", "{0ACD6A8A-77C5-40F6-9541-315995A38EA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW08.Task01.CollectionList", "AStep2021.CSharp.HW08.Task01.CollectionList\AStep2021.CSharp.HW08.Task01.CollectionList.csproj", "{5CBE3093-FBBE-414C-8F44-5BE1DB9C4F7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{0ACD6A8A-77C5-40F6-9541-315995A38EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ACD6A8A-77C5-40F6-9541-315995A38EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ACD6A8A-77C5-40F6-9541-315995A38EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBE3093-FBBE-414C-8F44-5BE1DB9C4F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBE3093-FBBE-414C-8F44-5BE1DB9C4F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBE3093-FBBE-414C-8F44-5BE1DB9C4F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBE3093-FBBE-414C-8F44-5BE1DB9C4F7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
