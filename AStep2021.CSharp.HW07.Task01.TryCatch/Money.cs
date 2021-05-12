@@ -25,7 +25,7 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
                 rub--;
                 kop += 100;
             }
-            if (rub < 0) throw new Exception("Банкрот");
+            if (rub < 0) throw new Exception("ERRPR: Вы банкрот!");
         }
 
         public void add(int rub, int kop = 0)
@@ -65,7 +65,7 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
             Money money = new Money();
 
             money.rub = a.rub / b;
-            int ostatok = money.rub = a.rub % b;
+            int ostatok = ((a.rub*100) / b) %100;
             money.kop = a.kop / b;
             money.kop += ostatok;          
             money.reset();

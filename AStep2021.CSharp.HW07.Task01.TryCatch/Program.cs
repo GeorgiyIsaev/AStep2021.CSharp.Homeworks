@@ -24,12 +24,21 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
                               
                 Console.WriteLine($"{money1} += {money2} = {money1 += money2}");
                 Console.WriteLine($"{money1} -= {money2} = {money1 -= money2}");
-                Console.WriteLine($"{money1} -= {money3} = {money1 -= money3}");
+
+                Console.WriteLine($"{money1} * {3} = {money1 *= 3}");
+                Console.WriteLine($"{money1} / {4} = {money1 /= 4}");
+                Console.WriteLine($"{money1} / {4} = {money1 /= 4}");
+
+
+
+                Console.Write($"{money1} -= {money3} = ");
+                Console.WriteLine($"{money1 -= money3}");
                 Console.ReadKey();
 
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine($"{e.Message}");
 
             }
         }
