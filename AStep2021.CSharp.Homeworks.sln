@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW06.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW06.Task01.InterfaicePrintForms", "AStep2021.CSharp.HW06.Task01.InterfaicePrintForms\AStep2021.CSharp.HW06.Task01.InterfaicePrintForms.csproj", "{C0065658-669A-43C2-BF6B-F0B3C3F2FBD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW07.Task01.TryCatch", "AStep2021.CSharp.HW07.Task01.TryCatch\AStep2021.CSharp.HW07.Task01.TryCatch.csproj", "{0ACD6A8A-77C5-40F6-9541-315995A38EA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{C0065658-669A-43C2-BF6B-F0B3C3F2FBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0065658-669A-43C2-BF6B-F0B3C3F2FBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0065658-669A-43C2-BF6B-F0B3C3F2FBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ACD6A8A-77C5-40F6-9541-315995A38EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACD6A8A-77C5-40F6-9541-315995A38EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACD6A8A-77C5-40F6-9541-315995A38EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACD6A8A-77C5-40F6-9541-315995A38EA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
