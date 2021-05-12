@@ -45,8 +45,8 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
         public static Money operator -(Money a, Money b)
         {
             Money money = new Money();
-            money.rub = a.rub + b.rub;
-            money.kop = a.kop + b.kop;
+            money.rub = a.rub - b.rub;
+            money.kop = a.kop - b.kop;
             money.reset();
             return money;
 
@@ -54,8 +54,8 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
         public static Money operator +(Money a, Money b)
         {
             Money money = new Money();
-            money.rub = a.rub - b.rub;
-            money.kop = a.kop - b.kop;
+            money.rub = a.rub + b.rub;
+            money.kop = a.kop + b.kop;
             money.reset();
             return money;
 

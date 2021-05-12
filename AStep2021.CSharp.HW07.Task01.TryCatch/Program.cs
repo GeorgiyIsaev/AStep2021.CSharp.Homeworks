@@ -17,11 +17,14 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
                 Money money3 = new Money();
 
                 money1.add(100);
-                money2.add(100,50);
+                money2.add(25,50);
                 money3.add(100,400);
 
                 Console.WriteLine($"money1 = {money1} \nmoney2 = {money2} \nmoney3 = {money3}");
-
+                              
+                Console.WriteLine($"{money1} += {money2} = {money1 += money2}");
+                Console.WriteLine($"{money1} -= {money2} = {money1 -= money2}");
+                Console.WriteLine($"{money1} -= {money3} = {money1 -= money3}");
                 Console.ReadKey();
 
             }
