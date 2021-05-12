@@ -25,7 +25,7 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
                 rub--;
                 kop += 100;
             }
-            if (rub < 0) throw new Exception("ERRPR: Вы банкрот!");
+            if (rub < 0) throw new BankruptException();
         }
 
         public void add(int rub, int kop = 0)
