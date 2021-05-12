@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AStep2021.CSharp.HW07.Task01.TryCatch
 {
     class Money
-    {
+    {       
         int rub = 0;
         int kop = 0;
         public int GetRub => rub;
@@ -35,6 +35,7 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
             reset();
         }
 
+        /*Операции*/
         public static Money operator -(Money a, Money b)
         {
             Money money = new Money();
@@ -85,6 +86,34 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
             money.kop--;
             money.reset();
             return money;
+        }
+
+
+        /*Сравнения*/
+        public static bool operator ==(Money a, Money b)
+        {         
+            
+            return ((a.rub == b.kop) && (b.rub == a.kop));
+        }
+        public static bool operator !=(Money a, Money b)
+        {
+            return !(a == b);
+        }
+        public static bool operator >(Money a, Money b)
+        {
+            return ((a.rub > b.kop) && (b.rub > a.kop));
+        }
+        public static bool operator <(Money a, Money b)
+        {
+            return !(a > b);
+        }
+        public static bool operator <=(Money a, Money b)
+        {
+            return ((a.rub <= b.kop) && (b.rub <= a.kop));
+        }
+        public static bool operator >=(Money a, Money b)
+        {
+            return !(a <= b);
         }
     }
 }
