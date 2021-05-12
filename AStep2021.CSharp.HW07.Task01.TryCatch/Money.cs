@@ -15,7 +15,7 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
 
         private void reset()
         {
-            while (kop > 100)
+            while (kop > 99)
             {
                 rub++;
                 kop -= 100;
@@ -36,7 +36,9 @@ namespace AStep2021.CSharp.HW07.Task01.TryCatch
         }
         public override string ToString()
         {
-            return (rub.ToString() + " " + kop.ToString());
+            string val = rub.ToString() + "руб. ";
+            if (kop != 0) val += kop.ToString() + "коп. ";
+            return val;
         }
 
         /*Операции*/
