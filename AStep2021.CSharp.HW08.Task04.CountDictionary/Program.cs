@@ -35,15 +35,12 @@ namespace AStep2021.CSharp.HW08.Task04.CountDictionary
             {
                 Console.WriteLine(val.Key + " - " + val.Value);
             }
-
-
         }
         static string ReadTXT(string nameFile = "test.txt")
         {
             string text = "";
             try
-            {
-                
+            {                
                 using (var file = new StreamReader(nameFile, Encoding.Unicode))
                 {
                     text = file.ReadToEnd();
