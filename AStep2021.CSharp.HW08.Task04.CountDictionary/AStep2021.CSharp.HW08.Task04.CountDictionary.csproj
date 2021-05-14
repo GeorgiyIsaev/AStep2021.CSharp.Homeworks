@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HomeWork08.List.txt" />
+    <Content Include="test.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
