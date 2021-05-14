@@ -32,5 +32,9 @@ namespace AStep2021.CSharp.HW08.Task02.CollectionPoint
         {
             this.x = default(T); this.y = default(T);
         }
+        public override string ToString()
+        {
+            return string.Format($"x = {X};  y = {Y}");
+        }
     }
 }
