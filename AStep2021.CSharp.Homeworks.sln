@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW08.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW08.Task03.FlatGeneric", "AStep2021.CSharp.HW08.Task03.FlatGeneric\AStep2021.CSharp.HW08.Task03.FlatGeneric.csproj", "{03400BF8-1FB7-439A-A752-0D08CCABECE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW08.Task04.CountDictionary", "AStep2021.CSharp.HW08.Task04.CountDictionary\AStep2021.CSharp.HW08.Task04.CountDictionary.csproj", "{48C9F2E1-F420-4FDF-AC13-1A736DBE7CCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{03400BF8-1FB7-439A-A752-0D08CCABECE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03400BF8-1FB7-439A-A752-0D08CCABECE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03400BF8-1FB7-439A-A752-0D08CCABECE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C9F2E1-F420-4FDF-AC13-1A736DBE7CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C9F2E1-F420-4FDF-AC13-1A736DBE7CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C9F2E1-F420-4FDF-AC13-1A736DBE7CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C9F2E1-F420-4FDF-AC13-1A736DBE7CCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
