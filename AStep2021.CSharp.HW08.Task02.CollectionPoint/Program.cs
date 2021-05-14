@@ -24,7 +24,7 @@ namespace AStep2021.CSharp.HW08.Task02.CollectionPoint
 
             Console.WriteLine("\nТочка3D с целочисленными значениями:");
             Point3D w1 = new Point3D(4, 7, 9);
-            Console.WriteLine("Точка2D: " + w1);
+            Console.WriteLine("Точка3D: " + w1);
             Console.WriteLine("GetType(): " + w1.GetType().FullName);
             Console.WriteLine("typeof: " + typeof(Point3D).ToString());
 
