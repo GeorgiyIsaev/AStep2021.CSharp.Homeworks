@@ -8,10 +8,10 @@ namespace AStep2021.CSharp.HW08.Task01.CollectionList
 {
     class Program
     {
+        static Dictionary<string, string> dictionary = new Dictionary<string, string>();
         static void Main(string[] args)
         {
 
-            Dictionary<string, string> dictionary = new Dictionary<string, string>();
             dictionary.Add("Россия", "Russia");
             dictionary.Add("Британия", "Great Britain");
             dictionary.Add("США", "USA");
@@ -23,40 +23,7 @@ namespace AStep2021.CSharp.HW08.Task01.CollectionList
                 Console.WriteLine("1 - Запросить перевод слова.");
                 Console.WriteLine("2 - Добавить слово.");
                 Console.WriteLine("3 - Показать весь словарь.");
-                Console.WriteLine("4 - ВЫХОД!.");
-
-                int param = IntRead("Выберите пункт меню");
-                switch (param)
-                {
-                    case 1: //Запросить перевод слова.
-                        Console.Write("Введите слово для перевода: ");
-                        string text = Console.ReadLine();
-                        foreach (KeyValuePair<string, string> val in dictionary)
-                        {
-                            if(text == val.Key)                           
-                                Console.WriteLine(val.Key + " - " + val.Value);
-                            if (text == val.Value)
-                                Console.WriteLine(val.Key + " - " + val.Value);
-                        }
-                        break;
-
-                    case 2: // Добавить слово
-                        Console.Write("Введите русское слово: ");
-                        string rus = Console.ReadLine();
-                        Console.Write("Введите англиское слово: ");
-                        string eng = Console.ReadLine();
-                        dictionary.Add(rus, eng);
-                        break;
-
-                    case 3: //Показать весь словарь
-                        foreach (KeyValuePair<string, string> val in dictionary)
-                        {
-                            Console.WriteLine(val.Key + " - " + val.Value);
-                        }
-                        break;
-
-                    case 4: Environment.Exit(0); break;
-                }
+                Console.WriteLine("4 - ВЫХОД!.");               
             }
 
         }
@@ -76,6 +43,41 @@ namespace AStep2021.CSharp.HW08.Task01.CollectionList
                 val = IntRead(nameval);
             }
             return val;
+        }
+        static void startmenu()
+        {
+            int param = IntRead("Выберите пункт меню");
+            switch (param)
+            {
+                case 1: //Запросить перевод слова.
+                    Console.Write("Введите слово для перевода: ");
+                    string text = Console.ReadLine();
+                    foreach (KeyValuePair<string, string> val in dictionary)
+                    {
+                        if (text == val.Key)
+                            Console.WriteLine(val.Key + " - " + val.Value);
+                        if (text == val.Value)
+                            Console.WriteLine(val.Key + " - " + val.Value);
+                    }
+                    break;
+
+                case 2: // Добавить слово
+                    Console.Write("Введите русское слово: ");
+                    string rus = Console.ReadLine();
+                    Console.Write("Введите англиское слово: ");
+                    string eng = Console.ReadLine();
+                    dictionary.Add(rus, eng);
+                    break;
+
+                case 3: //Показать весь словарь
+                    foreach (KeyValuePair<string, string> val in dictionary)
+                    {
+                        Console.WriteLine(val.Key + " - " + val.Value);
+                    }
+                    break;
+
+                case 4: Environment.Exit(0); break;
+            }
         }
 
     }
