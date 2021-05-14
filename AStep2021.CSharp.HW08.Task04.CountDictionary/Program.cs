@@ -28,6 +28,9 @@ namespace AStep2021.CSharp.HW08.Task04.CountDictionary
             }
 
             Console.WriteLine($"Колличество слов в тексте: {wordItems.Length}\n");
+            //сортировка по значениям
+            dictionary = dictionary.OrderBy(pair => pair.Value).ToDictionary(pair => pair.Key, pair => pair.Value);
+            
             foreach (var val in dictionary)
             {
                 Console.WriteLine(val.Key + " - " + val.Value);
