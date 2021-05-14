@@ -12,9 +12,9 @@ namespace AStep2021.CSharp.HW08.Task04.CountDictionary
         static void Main(string[] args)
         {
             Dictionary<string, int> dictionary = new Dictionary<string, int>();     
-
+           
             string text = ReadTXT();
-            string[] separator = { "\n", "\r",".",",",":","-"};
+            string[] separator = { " ","\n", "\r",".",",",":","-","<",">","(",")","[", "]" };
             string[] wordItems = text.Split(separator, StringSplitOptions.RemoveEmptyEntries);
 
             foreach(string wordItem in wordItems)
@@ -26,6 +26,8 @@ namespace AStep2021.CSharp.HW08.Task04.CountDictionary
                 else
                     dictionary[wordItem]++;
             }
+
+            Console.WriteLine($"Колличество слов в тексте: {wordItems.Length}\n");
             foreach (var val in dictionary)
             {
                 Console.WriteLine(val.Key + " - " + val.Value);
