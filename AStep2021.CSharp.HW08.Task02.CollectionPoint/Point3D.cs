@@ -25,7 +25,7 @@ namespace AStep2021.CSharp.HW08.Task02.CollectionPoint
 
         public override string ToString()
         {
-            return string.Format($"x = {X};  y = {Y};  z = {Z}");
+            return string.Format($"[{X}; {Y}; {Z}]");
         }
     }
 }
