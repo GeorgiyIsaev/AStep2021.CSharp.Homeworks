@@ -6,14 +6,28 @@ using System.Threading.Tasks;
 
 namespace AStep2021.CSharp.HW08.Task03.FlatGeneric
 {
-    class Line
+    // IComparable<T> - сортировка
+    // struct - недопускает значение null
+
+    class Line<T> where T : struct, IComparable<T>
     {
-        Point2D<int> p1;
-        Point2D<int> p2;
+        private Point2D<T> p1; 
+        private Point2D<T> p2;
 
-        public Line(int x1, int y1, int x2, int y2)
+        public Line(T x1, T y1, T x2, T y2)
         {
+            p1 = new Point2D<T>(x1, y1);
+            p2 = new Point2D<T>(x2, y2);
+        }
+        public Line(Point2D<T> p1, Point2D<T> p2)
+        {
+            this.p1 = p1;
+            this.p2 = p2;
+        }
 
+        public override string ToString()
+        {
+            return ($"Линия {p1} - {p2}");
         }
     }
 }
