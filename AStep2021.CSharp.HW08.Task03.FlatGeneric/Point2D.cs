@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AStep2021.CSharp.HW08.Task02.CollectionPoint
+namespace AStep2021.CSharp.HW08.Task03.FlatGeneric
 {
     class Point2D<T> where T : struct, IComparable<T>
     {
