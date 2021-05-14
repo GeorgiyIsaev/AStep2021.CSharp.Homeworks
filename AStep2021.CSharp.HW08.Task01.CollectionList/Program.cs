@@ -23,7 +23,8 @@ namespace AStep2021.CSharp.HW08.Task01.CollectionList
                 Console.WriteLine("1 - Запросить перевод слова.");
                 Console.WriteLine("2 - Добавить слово.");
                 Console.WriteLine("3 - Показать весь словарь.");
-                Console.WriteLine("4 - ВЫХОД!.");               
+                Console.WriteLine("4 - ВЫХОД!.");
+                startmenu();
             }
 
         }
@@ -67,6 +68,7 @@ namespace AStep2021.CSharp.HW08.Task01.CollectionList
                     Console.Write("Введите англиское слово: ");
                     string eng = Console.ReadLine();
                     dictionary.Add(rus, eng);
+                    Console.WriteLine("\nДобавлено слово: " + rus + " - " + eng);
                     break;
 
                 case 3: //Показать весь словарь
@@ -78,6 +80,8 @@ namespace AStep2021.CSharp.HW08.Task01.CollectionList
 
                 case 4: Environment.Exit(0); break;
             }
+            Console.ReadKey();
+            Console.Clear();
         }
 
     }
