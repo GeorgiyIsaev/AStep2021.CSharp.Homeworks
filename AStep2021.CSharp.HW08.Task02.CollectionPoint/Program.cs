@@ -14,7 +14,9 @@ namespace AStep2021.CSharp.HW08.Task02.CollectionPoint
             Point2D<int> p1 = new Point2D<int>(1, 3);
             Console.WriteLine("Точка2D: " + p1);
             Console.WriteLine("GetType(): " + p1.GetType().FullName);
+            Console.WriteLine("GetType(): " + p1.GetType());
             Console.WriteLine("typeof: " + typeof(Point2D<int>).ToString());
+            Console.WriteLine(p1.GetType().ToString() == typeof(Point2D<int>).ToString());
 
             Console.WriteLine("\nТочка2D с вещественными значениями:");
             Point2D<double> p2 = new Point2D<double>(1.2, 3.4);
