@@ -13,20 +13,13 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
     {
         static void Main(string[] args)
         {
-           
-            
-              Tamagotchi tamagotchi = new Tamagotchi("Покемон");
+                      
+            Tamagotchi tamagotchi = new Tamagotchi("Покемон");
             
             while (!tamagotchi.ifDead)
             {
                 tamagotchi.Аctivities(IntKey());              
-            }
-
-
-          
-            
-
-
+            }     
       
         }
          static int IntKey()
@@ -42,8 +35,6 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                     val = res;
                     break;
                 }
-
-
             }
             return val;
          }
