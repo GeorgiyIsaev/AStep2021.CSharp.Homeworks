@@ -15,15 +15,20 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         {
             Tamagotchi tamagotchi = new Tamagotchi("Покемон");
 
+            while (true)
+            {
+                Console.WriteLine("Выберите действие:");
+                Console.WriteLine("1 - Поиграть");
+                Console.WriteLine("2 - Погульять");
+                Console.WriteLine("3 - Покормить");
+                Console.WriteLine("4 - Отправить спать");
+                Console.WriteLine("5 - Лечить");
 
-            Console.WriteLine("\nPress the Enter key to exit the application...\n");
-            Console.WriteLine("The application started at {0:HH:mm:ss}", DateTime.Now);
-            Console.ReadLine();
-            tamagotchi.Stop();
-            Console.ReadLine();
-            tamagotchi.Stop();
-            Console.ReadLine();
-            Console.WriteLine("Terminating the application...");
+                Console.ReadLine();
+            }
+
+
+      
         }
     }
 

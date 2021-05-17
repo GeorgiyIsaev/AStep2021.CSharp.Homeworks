@@ -56,13 +56,42 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             satiety--;
             Random rnd = new Random();
             joy -= rnd.Next(1, 5);
+            Аctivities();
+            RequestNow();
+            
             if (health < 1 || satiety < 1 || joy < 1)
                 Dead();
+           
+        }
+
+        private void RequestNow()
+        {
+            if (health < 50)
+            {
+                Console.WriteLine($"Выличите {name}!");
+            }
+            if (satiety < 50)
+            {
+                Console.WriteLine($"{name} голоден!");
+            }
+            if (joy < 50)
+            {
+                Console.WriteLine($"Поиграйте с {name}!");
+            }
+            if (joy < 20)
+            {
+                health -= 25;
+                joy += 30;
+            }
+            if (satiety < 20)
+            {
+                health -= 25;
+                satiety += 30;
+            }
         }
 
         private void Dead()
-        {
-           
+        {           
             aTimer.Stop();
             aTimer.Dispose();
             Console.Clear();
@@ -86,6 +115,19 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                 RandomRequest();
             request = requestIT;          
         }
+
+        public void Аctivities()
+        {
+            Console.WriteLine("Выберите действие:");
+            Console.WriteLine("1 - Поиграть");
+            Console.WriteLine("2 - Погульять");
+            Console.WriteLine("3 - Покормить");
+            Console.WriteLine("4 - Отправить спать");
+            Console.WriteLine("5 - Лечить");
+            Console.ReadKey();
+        }
+
+
 
         private void Feed()
         {
