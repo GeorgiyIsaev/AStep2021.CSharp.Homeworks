@@ -15,11 +15,34 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
 
     class Tamagotchi
     {
+        private System.Timers.Timer aTimer;
+
         string name;
         Request request = 0;     
         public Tamagotchi(string name)
         {
             this.name = name;
+
+            aTimer = new System.Timers.Timer(2000);
+            aTimer.Elapsed += OnTimedEvent;
+            aTimer.AutoReset = true;
+            aTimer.Enabled = true;
+        }
+        public void Stop()
+        {
+            aTimer.Stop();
+        }
+        public void Dispose()
+        {
+            aTimer.Dispose();
+        }
+
+        private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
+        {
+             Console.Clear();
+            Console.WriteLine("The Elapsed event was raised at {0:HH:mm:ss}",
+                              e.SignalTime);
+           
         }
         public string  DialogStr()
         {
