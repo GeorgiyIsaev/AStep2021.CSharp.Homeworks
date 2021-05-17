@@ -16,14 +16,24 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
     class Tamagotchi
     {
         private System.Timers.Timer aTimer;
+        DateTime dateTime; 
+        Request request = 0; 
 
         string name;
-        Request request = 0;     
+        int health = 100;
+        int satiety = 100;
+        int joy = 100;
+
+
+
+
         public Tamagotchi(string name)
         {
             this.name = name;
 
-            aTimer = new System.Timers.Timer(2000);
+
+            dateTime = DateTime.Now;
+            aTimer = new System.Timers.Timer(1000);
             aTimer.Elapsed += OnTimedEvent;
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
@@ -32,18 +42,34 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         {
             aTimer.Stop();
         }
-        public void Dispose()
+        public void Start()
         {
-            aTimer.Dispose();
+            aTimer.Start();
+            //aTimer.
         }
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
-             Console.Clear();
-            Console.WriteLine("The Elapsed event was raised at {0:HH:mm:ss}",
-                              e.SignalTime);
-           
+            Console.Clear();
+            Console.WriteLine($"Тамагочи {name} прожил {(e.SignalTime - dateTime).ToString("ss")} секунд");
+            Console.WriteLine($"Статы: ХП={health} Голод={satiety} Счастье={joy}");
+            satiety--;
+            Random rnd = new Random();
+            joy -= rnd.Next(1, 5);
+            if (health < 1 || satiety < 1 || joy < 1)
+                Dead();
         }
+
+        private void Dead()
+        {
+           
+            aTimer.Stop();
+            aTimer.Dispose();
+            Console.Clear();
+            Console.WriteLine($"Тамагочи {name} умер");
+        }
+
+
         public string  DialogStr()
         {
             string dialog;
