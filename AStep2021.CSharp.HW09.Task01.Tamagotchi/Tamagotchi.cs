@@ -56,10 +56,10 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             satiety--;
             Random rnd = new Random();
             joy -= rnd.Next(1, 5);
-            Аctivities();
+            Menu();
             RequestNow();
             
-            if (health < 1 || satiety < 1 || joy < 1)
+            if (ifDead)
                 Dead();
            
         }
@@ -116,15 +116,45 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             request = requestIT;          
         }
 
-        public void Аctivities()
+        public void Menu()
         {
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("1 - Поиграть");
             Console.WriteLine("2 - Погульять");
             Console.WriteLine("3 - Покормить");
             Console.WriteLine("4 - Отправить спать");
-            Console.WriteLine("5 - Лечить");
-            Console.ReadKey();
+            Console.WriteLine("5 - Лечить");         
+        }
+        public void Аctivities(int val)
+        {
+            switch (val)
+            {
+                case 1:
+                    Console.WriteLine("1 - Поиграть");
+                    break;
+                case 2:
+                    Console.WriteLine("2 - Погульять");
+                    break;
+                case 3:
+                    Console.WriteLine("3 - Покормить");
+                    break;
+                case 4:
+                    Console.WriteLine("4 - Отправить спать");
+                    break;
+                case 5:
+                    Console.WriteLine("5 - Лечить");
+                    break;
+            };           
+
+        }
+        public bool ifDead
+        {
+            get
+            {
+               if(health <=0)
+                  return true;
+               return false;
+            }
         }
 
 
@@ -148,6 +178,6 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         private void Play()
         {
 
-        }      
+        }
     }
 }

@@ -13,23 +13,40 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
     {
         static void Main(string[] args)
         {
-            Tamagotchi tamagotchi = new Tamagotchi("Покемон");
-
-            while (true)
+           
+            
+              Tamagotchi tamagotchi = new Tamagotchi("Покемон");
+            
+            while (!tamagotchi.ifDead)
             {
-                Console.WriteLine("Выберите действие:");
-                Console.WriteLine("1 - Поиграть");
-                Console.WriteLine("2 - Погульять");
-                Console.WriteLine("3 - Покормить");
-                Console.WriteLine("4 - Отправить спать");
-                Console.WriteLine("5 - Лечить");
-
-                Console.ReadLine();
+                tamagotchi.Аctivities(IntKey());              
             }
+
+
+          
+            
 
 
       
         }
+         static int IntKey()
+         {
+            int val = 0;
+            while (true)
+            {
+                ConsoleKeyInfo key = Console.ReadKey();
+                int res;           
+                if(Int32.TryParse(key.KeyChar.ToString(), out res))
+                {
+                   if(res>0 && res <6)
+                    val = res;
+                    break;
+                }
+
+
+            }
+            return val;
+         }
     }
 
   
