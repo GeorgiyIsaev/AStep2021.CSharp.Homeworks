@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
 {
+    
+    
+    
     class Program
     {
         static void Main(string[] args)
         {
         }
     }
+
+  
 }
