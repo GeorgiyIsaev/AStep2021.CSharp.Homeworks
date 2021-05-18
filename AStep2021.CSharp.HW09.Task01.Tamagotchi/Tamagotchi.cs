@@ -23,6 +23,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         int health = 100;
         int satiety = 100;
         int joy = 100;
+        int energy = 100;
 
 
 
@@ -35,6 +36,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             dateTime = DateTime.Now;
             aTimer = new System.Timers.Timer(1000);
             aTimer.Elapsed += OnTimedEvent;
+            aTimer.Elapsed += Menu;
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
         }
@@ -44,21 +46,15 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         }
         public void Start()
         {
-            aTimer.Start();
-            //aTimer.
+            aTimer.Start();         
         }
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
             Console.Clear();
             Console.WriteLine($"Тамагочи {name} прожил {(e.SignalTime - dateTime).ToString("ss")} секунд");
-            Console.WriteLine($"Статы: ХП={health} Голод={satiety} Счастье={joy}");
-            satiety--;
-            Random rnd = new Random();
-            joy -= rnd.Next(1, 5);
-            Menu();
-            RequestNow();
-            
+            Console.WriteLine($"Статы: ХП={health} Голод={satiety} Счастье={joy} Энергия={energy}");             
+            RequestNow();            
             if (ifDead)
                 Dead();
            
@@ -66,6 +62,9 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
 
         private void RequestNow()
         {
+           // satiety--;
+           // joy--;
+            energy -= 5;
             if (health < 50)
             {
                 Console.WriteLine($"Выличите {name}!");
@@ -77,6 +76,18 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             if (joy < 50)
             {
                 Console.WriteLine($"Поиграйте с {name}!");
+            }
+            if (energy < 20)
+            {
+                Console.WriteLine($"{name} устал!");
+            }
+
+            if (energy < 2)
+            {
+                Console.WriteLine($"Тамагочи {name} очень устал и идет спать.\n Он растроен, что его не уложили спать вовремя");
+                joy -= 35;
+                aTimer.Elapsed -= Menu;
+                aTimer.Elapsed += Sleep;
             }
             if (joy < 20)
             {
@@ -98,6 +109,21 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             Console.WriteLine($"Тамагочи {name} умер");
         }
 
+        private void Sleep(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            energy += 15;
+            Console.WriteLine($"Тамагочи {name} спит");
+            if ((health < 10 && satiety < 10) || energy>99)
+            {
+                aTimer.Elapsed -= Sleep;
+                aTimer.Elapsed += WakeUp;
+            }
+        }
+        private void WakeUp(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            aTimer.Elapsed += Menu;
+        }
+
 
         public string  DialogStr()
         {
@@ -116,7 +142,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             request = requestIT;          
         }
 
-        public void Menu()
+        public void Menu(Object source, System.Timers.ElapsedEventArgs e)
         {
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("1 - Поиграть");
