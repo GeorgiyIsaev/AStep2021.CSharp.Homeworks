@@ -38,15 +38,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             aTimer.Elapsed += OnTimedEvent;            
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
-        }
-        public void Stop()
-        {
-            aTimer.Stop();
-        }
-        public void Start()
-        {
-            aTimer.Start();         
-        }
+        }      
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
@@ -62,15 +54,16 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
 
         private void RequestNow()
         {
-            if (request == Request.Wiat)
-            {               
-                satiety--;
-                joy--;
-                energy -= 5;
+            satiety--;
+            joy--;
+            energy -= 5;
 
+            if (request == Request.Wiat)
+            {     
                 if (energy < 2)
                 {
                     Console.WriteLine($"Тамагочи {name} очень устал и идет спать.\n Он растроен, что его не уложили спать вовремя");
+                    request = Request.Sleep;
                     joy -= 35;                                   
                 }
                 if (joy < 20)
@@ -86,35 +79,33 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                 Menu();
             }
             else if (request == Request.Sleep)
-            {               
-                energy += 10;
+            {     
                 Console.WriteLine($"Тамагочи {name} спит, не мешайте ему!");
 
-                if ((health < 10) || energy > 99)
-                {
+                if ((health < 10) || energy > 990)               
                     request = Request.Wiat;
-                }
+                else  energy += 10;
+                
             }
             else if (request == Request.Feed)
             {            
                 Console.WriteLine($"Тамагочи {name} ест печенье!");
-                for (int i = 4; i > 0; i--)
-                {
-                    if (health < 10 || satiety > 99) request = Request.Wiat;
-                    else satiety++;
-                }
+               
+                    if (health < 10 || satiety > 981) request = Request.Wiat;
+                    else satiety+=20;
+                
             }
             else if (request == Request.Walk)
             {            
                 Console.WriteLine($"Тамагочи {name} радостно гуляет вместе с Вами!");
-                if (health < 10 || joy > 99) request = Request.Wiat;
+                if (health < 10 || joy > 991) request = Request.Wiat;
                 else joy+=4;
                 
             }
             else if (request == Request.Play)
             {             
                 Console.WriteLine($"Тамагочи {name} счастлив играть с Вами!");
-                if (health < 10 || joy>99) request = Request.Wiat;
+                if (health < 10 || joy>990) request = Request.Wiat;
                 else joy+=10;
                 
             }
@@ -123,7 +114,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                 health += 10;
                 Console.WriteLine($"Вы лечите тамагочи {name}!");
                 
-                    if (health > 99) request = Request.Wiat;                    
+                    if (health > 991) request = Request.Wiat;                    
                     else health+=10;                    
                 
             }
@@ -135,19 +126,8 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             aTimer.Dispose();
             Console.Clear();
             Console.WriteLine($"Тамагочи {name} умер");
-        }
+        }      
 
-      
-
-
-        public string  DialogStr()
-        {
-            string dialog;
-            dialog = "Тамагочи \"" + "\" хочет ";
-            RandomRequest();
-            dialog += request.ToString();
-            return dialog;
-        }
         private void RandomRequest()
         {      
             Random rnd = new Random();
@@ -171,24 +151,19 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             if (request != Request.Wiat) return;
             switch (val)
             {
-                case 1:
-                    Console.WriteLine("1 - Поиграть");
+                case 1:               
                     request = Request.Play;
                     break;
-                case 2:
-                    Console.WriteLine("2 - Погульять");
+                case 2:             
                     request = Request.Walk;
                     break;
-                case 3:
-                    Console.WriteLine("3 - Покормить");
+                case 3:          
                     request = Request.Feed;
                     break;
-                case 4:
-                    Console.WriteLine("4 - Отправить спать");
+                case 4:                   
                     request = Request.Sleep;
                     break;
                 case 5:
-                    Console.WriteLine("5 - Лечить");
                     request = Request.Treat;
                     break;
             };           
