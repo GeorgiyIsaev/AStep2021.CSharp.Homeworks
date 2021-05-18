@@ -58,65 +58,47 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             joy--;
             energy -= 5;
 
-            if (request == Request.Wiat)
-            {     
-                if (energy < 2)
-                {
-                    Console.WriteLine($"Тамагочи {name} очень устал и идет спать.\n Он растроен, что его не уложили спать вовремя");
-                    request = Request.Sleep;
-                    joy -= 35;                                   
-                }
-                if (joy < 20)
-                {
-                    health -= 25;
-                    joy += 30;
-                }
-                if (satiety < 20)
-                {
-                    health -= 25;
-                    satiety += 30;
-                }
-                Menu();
-            }
-            else if (request == Request.Sleep)
-            {     
-                Console.WriteLine($"Тамагочи {name} спит, не мешайте ему!");
-
-                if ((health < 10) || energy > 990)               
-                    request = Request.Wiat;
-                else  energy += 10;
-                
-            }
-            else if (request == Request.Feed)
-            {            
-                Console.WriteLine($"Тамагочи {name} ест печенье!");
-               
-                    if (health < 10 || satiety > 981) request = Request.Wiat;
-                    else satiety+=20;
-                
-            }
-            else if (request == Request.Walk)
-            {            
-                Console.WriteLine($"Тамагочи {name} радостно гуляет вместе с Вами!");
-                if (health < 10 || joy > 991) request = Request.Wiat;
-                else joy+=4;
-                
-            }
-            else if (request == Request.Play)
-            {             
-                Console.WriteLine($"Тамагочи {name} счастлив играть с Вами!");
-                if (health < 10 || joy>990) request = Request.Wiat;
-                else joy+=10;
-                
-            }
-            else if (request == Request.Treat)
+            switch (request)
             {
-                health += 10;
-                Console.WriteLine($"Вы лечите тамагочи {name}!");
-                
-                    if (health > 991) request = Request.Wiat;                    
-                    else health+=10;                    
-                
+                case Request.Wiat:
+                    if (energy < 2)
+                    {
+                        Console.WriteLine($"Тамагочи {name} очень устал и идет спать.\n Он растроен, что его не уложили спать вовремя");
+                        request = Request.Sleep;
+                        joy -= 35;
+                    }
+                    if (joy < 20 || satiety < 20)
+                    {
+                        health -= 25;
+                        joy += 30;
+                    }
+                    Menu();
+                    break;
+                case Request.Sleep:
+                    Console.WriteLine($"Тамагочи {name} спит, не мешайте ему!");
+                    if (health < 10 || energy > 990) request = Request.Wiat;
+                    else energy += 10;
+                    break;
+                case Request.Feed:
+                    Console.WriteLine($"Тамагочи {name} ест печенье!");
+                    if (health < 10 || satiety > 981) request = Request.Wiat;
+                    else satiety += 20;
+                    break;
+                case Request.Walk:
+                    Console.WriteLine($"Тамагочи {name} радостно гуляет вместе с Вами!");
+                    if (health < 10 || joy > 991) request = Request.Wiat;
+                    else joy += 4;
+                    break;
+                case Request.Play:
+                    Console.WriteLine($"Тамагочи {name} счастлив играть с Вами!");
+                    if (health < 10 || joy > 990) request = Request.Wiat;
+                    else joy += 10;
+                    break;
+                case Request.Treat:
+                    Console.WriteLine($"Вы лечите тамагочи {name}!");
+                    if (health > 991) request = Request.Wiat;
+                    else health += 10;
+                    break;
             }
         }
 
@@ -166,7 +148,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                 case 5:
                     request = Request.Treat;
                     break;
-            };           
+            };          
 
         }
         public bool ifDead
