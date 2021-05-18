@@ -26,8 +26,6 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         int energy = 1000;
 
 
-
-
         public Tamagotchi(string name)
         {
             this.name = name;
@@ -39,6 +37,8 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
         }      
+
+
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
@@ -108,16 +108,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             aTimer.Dispose();
             Console.Clear();
             Console.WriteLine($"Тамагочи {name} умер");
-        }      
-
-        private void RandomRequest()
-        {      
-            Random rnd = new Random();
-            Request requestIT = (Request)rnd.Next(0, 5);
-            if (requestIT == request)
-                RandomRequest();
-            request = requestIT;          
-        }
+        }   
 
         public void Menu()
         {
@@ -163,25 +154,14 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
 
 
 
-        private void Feed()
+        private void RandomRequest()
         {
-
+            Random rnd = new Random();
+            Request requestIT = (Request)rnd.Next(0, 5);
+            if (requestIT == request)
+                RandomRequest();
+            request = requestIT;
         }
-        private void Walk()
-        {
 
-        }
-        private void Sleep()
-        {
-
-        }
-        private void Treat()
-        {
-
-        }
-        private void Play()
-        {
-
-        }
     }
 }
