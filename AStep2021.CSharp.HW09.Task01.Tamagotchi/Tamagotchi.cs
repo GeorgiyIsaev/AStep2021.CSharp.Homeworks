@@ -8,7 +8,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
 {
     enum Request
     {
-        Feed, Walk, Sleep, Treat, Play
+        Wiat, Sleep, Feed, Walk, Play, Treat
     }
 
 
@@ -31,11 +31,12 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         public Tamagotchi(string name)
         {
             this.name = name;
-
-
             dateTime = DateTime.Now;
+            request = Request.Wiat;
+
             aTimer = new System.Timers.Timer(1000);
             aTimer.Elapsed += OnTimedEvent;
+
             aTimer.Elapsed += Menu;
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
@@ -53,51 +54,84 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         {
             Console.Clear();
             Console.WriteLine($"Тамагочи {name} прожил {(e.SignalTime - dateTime).ToString("ss")} секунд");
-            Console.WriteLine($"Статы: ХП={health} Голод={satiety} Счастье={joy} Энергия={energy}");             
-            RequestNow();            
+            Console.WriteLine($"Статы: ХП={health} Голод={satiety} Счастье={joy} Энергия={energy}");   
+            
+            RequestNow();   
+            
             if (ifDead)
-                Dead();
-           
+                Dead();           
         }
 
         private void RequestNow()
         {
-           // satiety--;
-           // joy--;
-            energy -= 5;
-            if (health < 50)
+            if (request == Request.Wiat)
             {
-                Console.WriteLine($"Выличите {name}!");
+                satiety--;
+                joy--;
+                energy -= 5;
+                if (energy < 2)
+                {
+                    Console.WriteLine($"Тамагочи {name} очень устал и идет спать.\n Он растроен, что его не уложили спать вовремя");
+                    joy -= 35;
+                    aTimer.Elapsed -= Menu;                   
+                }
+                if (joy < 20)
+                {
+                    health -= 25;
+                    joy += 30;
+                }
+                if (satiety < 20)
+                {
+                    health -= 25;
+                    satiety += 30;
+                }
             }
-            if (satiety < 50)
-            {
-                Console.WriteLine($"{name} голоден!");
-            }
-            if (joy < 50)
-            {
-                Console.WriteLine($"Поиграйте с {name}!");
-            }
-            if (energy < 20)
-            {
-                Console.WriteLine($"{name} устал!");
-            }
+            else if (request == Request.Sleep)
+            {               
+                energy += 10;
+                Console.WriteLine($"Тамагочи {name} спит, не мешайте ему!");
 
-            if (energy < 2)
-            {
-                Console.WriteLine($"Тамагочи {name} очень устал и идет спать.\n Он растроен, что его не уложили спать вовремя");
-                joy -= 35;
-                aTimer.Elapsed -= Menu;
-                aTimer.Elapsed += Sleep;
+                if ((health < 10) || energy > 99)
+                {
+                    request = Request.Walk;
+                }
             }
-            if (joy < 20)
-            {
-                health -= 25;
-                joy += 30;
+            else if (request == Request.Feed)
+            {            
+                Console.WriteLine($"Тамагочи {name} ест печенье!");
+                for (int i = 4; i < 0; i--)
+                {
+                    if (health < 10 || satiety > 99) request = Request.Walk;
+                    else satiety++;
+                }
             }
-            if (satiety < 20)
+            else if (request == Request.Walk)
+            {            
+                Console.WriteLine($"Тамагочи {name} радостно гуляет вместе с Вами!");
+                for (int i = 4; i < 0; i--)
+                {
+                    if (health < 10 || joy > 99) request = Request.Walk;
+                    else joy++;
+                }
+            }
+            else if (request == Request.Play)
+            {             
+                Console.WriteLine($"Тамагочи {name} счастлив играть с Вами!");
+                for (int i = 6; i < 0; i--)
+                {
+                    if (health < 10 || joy>99) request = Request.Walk;
+                    else joy++;
+                }
+            }
+            else if (request == Request.Treat)
             {
-                health -= 25;
-                satiety += 30;
+                health += 10;
+                Console.WriteLine($"Вы лечите тамагочи {name}!");
+                for (int i = 10; i < 0; i--)
+                {                  
+                    if (health > 99) request = Request.Walk;                    
+                    else health++;                    
+                }
             }
         }
 
