@@ -158,7 +158,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         {
             if (ifDialogNow || request != Request.Wiat) return;
             Random rnd = new Random();
-            int randomVal = rnd.Next(0, 15);
+            int randomVal = rnd.Next(0, 25);
             if (health < 250)
                 DialogTamagochi($"Скорее вылечи меня!", Request.Treat);
             if (randomVal == 0 && joy < 960)
@@ -182,8 +182,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
              var result = MessageBoxTimeout((System.IntPtr)0, task, "Тамагочи хочет внимания!", 1, 0, 5000);
             //32000 - нет нажатия //отмена 2  // да 1
             if (result == 1)
-            {
-                joy += 200;
+            {               
                 request = status;
             }
             else
