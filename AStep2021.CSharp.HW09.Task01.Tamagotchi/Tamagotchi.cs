@@ -65,39 +65,39 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                     {
                         Console.WriteLine($"Тамагочи {name} очень устал и идет спать.\n Он растроен, что его не уложили спать вовремя");
                         request = Request.Sleep;
-                        joy -= 35;
+                        joy -= 350;
                     }
                     if (joy < 20 || satiety < 20)
                     {
                         health -= 25;
-                        joy += 30;
+                        joy += 200;
                     }
                     Menu();
                     break;
                 case Request.Sleep:
                     Console.WriteLine($"Тамагочи {name} спит, не мешайте ему!");
-                    if (health < 10 || energy > 990) request = Request.Wiat;
-                    else energy += 10;
+                    if (health < 10 || energy > 940) request = Request.Wiat;
+                    else energy += 100;
                     break;
                 case Request.Feed:
                     Console.WriteLine($"Тамагочи {name} ест печенье!");
-                    if (health < 10 || satiety > 981) request = Request.Wiat;
-                    else satiety += 20;
+                    if (health < 10 || satiety > 940) request = Request.Wiat;
+                    else satiety += 70;
                     break;
                 case Request.Walk:
                     Console.WriteLine($"Тамагочи {name} радостно гуляет вместе с Вами!");
-                    if (health < 10 || joy > 991) request = Request.Wiat;
-                    else joy += 4;
+                    if (health < 10 || joy > 981) request = Request.Wiat;
+                    else joy += 25;
                     break;
                 case Request.Play:
                     Console.WriteLine($"Тамагочи {name} счастлив играть с Вами!");
-                    if (health < 10 || joy > 990) request = Request.Wiat;
-                    else joy += 10;
+                    if (health < 10 || joy > 980) request = Request.Wiat;
+                    else joy += 40;
                     break;
                 case Request.Treat:
                     Console.WriteLine($"Вы лечите тамагочи {name}!");
-                    if (health > 991) request = Request.Wiat;
-                    else health += 10;
+                    if (health > 910) request = Request.Wiat;
+                    else health += 150;
                     break;
             }
         }
@@ -161,13 +161,15 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             int randomVal = rnd.Next(0, 25);
             if (health < 250)
                 DialogTamagochi($"Скорее вылечи меня!", Request.Treat);
-            if (randomVal == 0 && joy < 960)
+            if (satiety < 150)
+                DialogTamagochi($"Мне срочна нужна еда", Request.Treat);
+            if (randomVal == 0 && joy < 760)
                 DialogTamagochi($"{name} хочет погулять!", Request.Walk);
-            else if (randomVal == 1 && joy<960)
+            else if (randomVal == 1 && joy<760)
               DialogTamagochi($"Эй, давай сыграем в игру!", Request.Play);
-            else if (randomVal == 2 && energy < 500)
+            else if (randomVal == 2 && energy < 300)
                 DialogTamagochi($"Я хочу кушать!", Request.Feed);
-            else if (randomVal == 3 && satiety < 960)
+            else if (randomVal == 3 && satiety < 300)
                 DialogTamagochi($"Прочитай мне сказку на ночь! ", Request.Sleep);   
             else if (randomVal == 5 && joy < 300)
                 DialogTamagochi($"Эй, эй я тоже хочу играть!", Request.Play);
