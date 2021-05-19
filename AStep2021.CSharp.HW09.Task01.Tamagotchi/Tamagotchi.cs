@@ -152,20 +152,22 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             }
         }
 
+
+        bool ifDialogNow = false;
         public void RandomRequest()
         {
-            if (request != Request.Wiat) return;
+            if (ifDialogNow || request != Request.Wiat) return;
             Random rnd = new Random();
-            int randomVal = rnd.Next(0, 5);
+            int randomVal = rnd.Next(0, 15);
             if (health < 250)
                 DialogTamagochi($"Скорее вылечи меня!", Request.Treat);
-            if (randomVal == 0 && joy < 900)
+            if (randomVal == 0 && joy < 960)
                 DialogTamagochi($"{name} хочет погулять!", Request.Walk);
-            else if (randomVal == 1 && joy<900)
+            else if (randomVal == 1 && joy<960)
               DialogTamagochi($"Эй, давай сыграем в игру!", Request.Play);
             else if (randomVal == 2 && energy < 500)
                 DialogTamagochi($"Я хочу кушать!", Request.Feed);
-            else if (randomVal == 3 && satiety < 700)
+            else if (randomVal == 3 && satiety < 960)
                 DialogTamagochi($"Прочитай мне сказку на ночь! ", Request.Sleep);   
             else if (randomVal == 5 && joy < 300)
                 DialogTamagochi($"Эй, эй я тоже хочу играть!", Request.Play);
@@ -175,21 +177,22 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             static extern int MessageBoxTimeout(IntPtr hwnd, String text, String title,
                                      uint type, Int16 wLanguageId, Int32 milliseconds);         
         private void DialogTamagochi(string task, Request status)
-        {    
-            var result = MessageBoxTimeout((System.IntPtr)0, task, "Тамагочи хочет внимания!", 1, 0, 5000);
+        {
+            ifDialogNow = true;
+             var result = MessageBoxTimeout((System.IntPtr)0, task, "Тамагочи хочет внимания!", 1, 0, 5000);
             //32000 - нет нажатия //отмена 2  // да 1
-
-
             if (result == 1)
             {
-                joy += 20;
+                joy += 200;
                 request = status;
             }
             else
             {
-                joy -= 20;
+                health -= 200;
+                joy -= 200;
                 Console.WriteLine($"{name} растроен из-за того что вы не смогли выполнить его просьбу ");
-            }  
+            }
+            ifDialogNow = false;
         }
     }
 }
