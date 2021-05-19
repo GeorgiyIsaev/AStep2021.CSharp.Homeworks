@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
 {
@@ -158,5 +159,9 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                 RandomRequest();
             request = requestIT;
         }
+        private void DialogTamagochi()
+        {
+          
+
     }
 }
