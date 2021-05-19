@@ -159,11 +159,31 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                 RandomRequest();
             request = requestIT;
         }
-        private void DialogTamagochi()
-        {
-            MessageBox.Show("Привет я твой тамагочи!");
-        }
+
+       [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
+            static extern int MessageBoxTimeout(IntPtr hwnd, String text, String title,
+                                     uint type, Int16 wLanguageId, Int32 milliseconds);         
+        public void DialogTamagochi(string task, Request status)
+        {    
+            var result = MessageBoxTimeout((System.IntPtr)0, task, "Тамагочи хочет внимания!", 1, 0, 5000);
+            //32000 - нет нажатия //отмена 2  // да 1
+
+
+            if (result == 1)
+            {               
+
+            }
+            else
+            {
+                joy -= 20;
+                Console.WriteLine($"{name} растроен из-за того что вы не смогли выполнить его просьбу ");
+            }
+
+
+
           
 
+
+        }
     }
 }
