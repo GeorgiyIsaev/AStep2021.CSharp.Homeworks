@@ -36,9 +36,7 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             aTimer.Elapsed += OnTimedEvent;            
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
-        }      
-
-
+        }  
 
         private void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
@@ -152,8 +150,6 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
             }
         }
 
-
-
         private void RandomRequest()
         {
             Random rnd = new Random();
@@ -162,6 +158,5 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                 RandomRequest();
             request = requestIT;
         }
-
     }
 }
