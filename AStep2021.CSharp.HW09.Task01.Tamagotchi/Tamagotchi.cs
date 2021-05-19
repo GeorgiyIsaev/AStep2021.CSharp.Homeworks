@@ -161,6 +161,8 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
         }
         private void DialogTamagochi()
         {
+            MessageBox.Show("Привет я твой тамагочи!");
+        }
           
 
     }
