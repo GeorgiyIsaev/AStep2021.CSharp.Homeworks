@@ -16,9 +16,6 @@ namespace AStep2021.CSharp.HW09.Task01.Tamagotchi
                       
             Tamagotchi tamagotchi = new Tamagotchi("Покемон");
 
-            tamagotchi.DialogTamagochi();
-
-
             while (!tamagotchi.ifDead)
             {
                 tamagotchi.Аctivities(IntKey());              
