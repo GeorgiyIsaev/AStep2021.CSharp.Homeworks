@@ -5,9 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AStep2021.CSharp.HW10.Task01.Payment
-{
+{        
     class Payment
     {
+        static bool ifFormater
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         int countPaymentForDay; //оплата за день;
         int countDay; //количество дней;
         int fineForDay; //штраф за один день задержки оплаты;
