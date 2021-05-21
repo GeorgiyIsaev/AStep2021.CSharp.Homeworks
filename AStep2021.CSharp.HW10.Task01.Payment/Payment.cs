@@ -20,20 +20,23 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
         int SumFine => fineForDay * countDayNotPayment; // штраф (вычисляемое поле);
         int SumPayment => SumFine + SumPaymentNotFine; // общая сумма к оплате (вычисляемое поле) 
 
-        public void Serialize(BinaryWriter bw)
+        public void Serialize(BinaryWriter stram)
         {      
-            bw.Write(countPaymentForDay);
-            bw.Write(countDay);
-            bw.Write(fineForDay);
-            bw.Write(countDayNotPayment);
+            stram.Write(countPaymentForDay);
+            stram.Write(countDay);
+            stram.Write(fineForDay);
+            stram.Write(countDayNotPayment);
 
+            
             if (ifFormaterSerialize)
             {
-                bw.Write(SumPaymentNotFine);
-                bw.Write(SumFine);
-                bw.Write(SumPayment);
+                stram.Write(SumPaymentNotFine);
+                stram.Write(SumFine);
+                stram.Write(SumPayment);
             }
         }
+
+
     }
 }
 
