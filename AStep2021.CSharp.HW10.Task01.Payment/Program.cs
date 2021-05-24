@@ -10,6 +10,15 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
     {
         static void Main(string[] args)
         {
+            Payment payment = new Payment 
+            {
+                 countPaymentForDay =1,
+                 countDay =1,
+                 fineForDay =100,
+                 countDayNotPayment=0
+            };
+
+
         }
     }
 }

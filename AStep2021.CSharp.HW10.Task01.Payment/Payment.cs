@@ -11,14 +11,14 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
     {
         static bool ifFormaterSerialize => false;
 
-        int countPaymentForDay; //оплата за день;
-        int countDay; //количество дней;
-        int fineForDay; //штраф за один день задержки оплаты;
-        int countDayNotPayment; // количество дней задержи оплаты;
+        public int countPaymentForDay; //оплата за день;
+        public int countDay; //количество дней;
+        public int fineForDay; //штраф за один день задержки оплаты;
+        public int countDayNotPayment; // количество дней задержи оплаты;
 
-        int SumPaymentNotFine => countPaymentForDay * countDay; // сумма к оплате без штрафа (вычисляемое поле);
-        int SumFine => fineForDay * countDayNotPayment; // штраф (вычисляемое поле);
-        int SumPayment => SumFine + SumPaymentNotFine; // общая сумма к оплате (вычисляемое поле) 
+        public int SumPaymentNotFine => countPaymentForDay * countDay; // сумма к оплате без штрафа (вычисляемое поле);
+        public int SumFine => fineForDay * countDayNotPayment; // штраф (вычисляемое поле);
+        public int SumPayment => SumFine + SumPaymentNotFine; // общая сумма к оплате (вычисляемое поле) 
 
         public void Serialize(BinaryWriter stram)
         {      
