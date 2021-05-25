@@ -14,27 +14,31 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
         {
             Payment payment = new Payment 
             {
-                 countPaymentForDay =1,
-                 countDay =1,
-                 fineForDay =100,
-                 countDayNotPayment=0
+                 countPaymentForDay =25,
+                 countDay =25,
+                 fineForDay =30,
+                 countDayNotPayment=4
             };
             Console.WriteLine(payment);
             SaveXmlSerializer("test.txt", payment);
             ReadXmlSerializer("test.txt");
 
+            Payment.AlterIfFormaterSerialize();
+            SaveXmlSerializer("test2.txt", payment);
+            ReadXmlSerializer("test2.txt");
+            Console.ReadKey();
+
+
+
+
         }
         private static void SaveXmlSerializer(string namefile, Payment payment)
-        {
-            payment = new Payment();
-
+        {          
             XmlSerializer xmlFormat = new XmlSerializer(typeof(Payment));
             using (Stream fStream = File.Open(namefile, FileMode.OpenOrCreate))
             {
                 xmlFormat.Serialize(fStream, payment);
             }
-
-
         }
         private static void ReadXmlSerializer(string namefile)
         {
