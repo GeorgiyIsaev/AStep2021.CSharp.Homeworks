@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using System.IO;
 
 namespace AStep2021.CSharp.HW10.Task01.Payment
-{        
-    class Payment
+{
+    public class Payment
     {
         static bool ifFormaterSerialize => false;
 
@@ -34,6 +34,11 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
                 stram.Write(SumFine);
                 stram.Write(SumPayment);
             }
+        }
+        public override string ToString()
+        {
+            return "Дней: " + countDay + "Оплата за день: " + countPaymentForDay +
+                "Штраф " + fineForDay + "Дней задержки: "+ countDayNotPayment;
         }
 
 
