@@ -26,7 +26,7 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
         public int SumPayment => SumFine + SumPaymentNotFine; // общая сумма к оплате (вычисляемое поле) 
 
        
-         public void Serialize(TextWriter stram)
+         public void Serialize(StreamWriter stram)
          {
             stram.WriteLine("<?xml version=\"1.0\"?>"); 
             stram.WriteLine("<Payment xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">");

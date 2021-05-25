@@ -19,19 +19,34 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
                  fineForDay =30,
                  countDayNotPayment=4
             };
+
             Console.WriteLine(payment);
-            SaveXmlSerializer("test.txt", payment);
-            ReadXmlSerializer("test.txt");
+            SaveXmlSerializer("test1.xml", payment);
+            ReadXmlSerializer("test1.xml");
 
             Payment.AlterIfFormaterSerialize();
-            SaveXmlSerializer("test2.txt", payment);
-            ReadXmlSerializer("test2.txt");
+            SaveXmlSerializer("test2.xml", payment);
+            ReadXmlSerializer("test2.xml");
+
+            SaveUserXmlSerializer("usertest1.xml", payment);
+            ReadXmlSerializer("usertest1.xml");
+
+            Payment.AlterIfFormaterSerialize();
+            SaveUserXmlSerializer("usertest2.xml", payment);
+            ReadXmlSerializer("usertest2.xml");
             Console.ReadKey();
-
-
-
-
         }
+        private static void SaveUserXmlSerializer(string namefile, Payment payment)
+        {
+            using (FileStream fs = new FileStream(namefile, FileMode.Create))
+            {
+                using (StreamWriter sw = new StreamWriter(fs, Encoding.Unicode))
+                {
+                    payment.Serialize(sw);
+                }
+            }     
+        }
+
         private static void SaveXmlSerializer(string namefile, Payment payment)
         {          
             XmlSerializer xmlFormat = new XmlSerializer(typeof(Payment));
