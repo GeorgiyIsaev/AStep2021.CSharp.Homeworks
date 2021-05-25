@@ -65,6 +65,5 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
             }
             Console.WriteLine(temp);
         }
-
     }
 }

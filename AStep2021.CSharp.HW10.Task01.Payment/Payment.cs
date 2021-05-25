@@ -48,8 +48,6 @@ namespace AStep2021.CSharp.HW10.Task01.Payment
             return "Дней: " + countDay + "Оплата за день: " + countPaymentForDay +
                 "Штраф " + fineForDay + "Дней задержки: "+ countDayNotPayment;
         }
-
-
     }
 }
 
