@@ -12,24 +12,23 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
         static void Main(string[] args)
         {
             List<Store> stores = new List<Store>();
-            CreateStores(stores);
-            
-            //foreach (Store store in stores)            
-            //    Console.WriteLine(store);
+            CreateStores(stores);    
 
 
             Order order1 = new Order("Заказ Олега:");
             order1.NewOrderRandom(stores);
             order1.PrintOrder();
-           
+            order1.XmlTextWriterToFile("order1.xml");
+
             Order order2 = new Order("Заказ Никиты:");
             order2.NewOrderRandom(stores);
             order2.PrintOrder();
-            
+            order2.XmlTextWriterToFile("order2.xml");
+
             Order order3 = new Order("Заказ Димы:");
             order3.NewOrderRandom(stores);
             order3.PrintOrder();
-            order3.XmlTextWriterToFile();
+            order3.XmlTextWriterToFile("order3.xml");
 
 
 
