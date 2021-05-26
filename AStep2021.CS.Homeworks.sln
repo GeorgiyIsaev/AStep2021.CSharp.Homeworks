@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW10.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW11.Task01.ProductStore", "AStep2021.CSharp.HW11.Task01.ProductStore\AStep2021.CSharp.HW11.Task01.ProductStore.csproj", "{0BE2517A-6F2F-46D6-8C1D-DE09BF8A8AAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize", "AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize\AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize.csproj", "{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{0BE2517A-6F2F-46D6-8C1D-DE09BF8A8AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BE2517A-6F2F-46D6-8C1D-DE09BF8A8AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BE2517A-6F2F-46D6-8C1D-DE09BF8A8AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
