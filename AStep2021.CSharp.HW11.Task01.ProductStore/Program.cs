@@ -33,15 +33,15 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             /*Вычитывание*/
             Order order4 = new Order("Заказ из ХМL order3:");
             ReadFileXML(order4, "order3.xml" );
-            order3.PrintOrder();
+            order4.PrintOrder();
 
             Order order5 = new Order("Заказ из ХМL order2:");
-            ReadFileXML(order5, "order2.xml"));
-            order3.PrintOrder();
+            ReadFileXML(order5, "order2.xml");
+            order5.PrintOrder();
 
             Order order6 = new Order("Заказ из ХМL order1:");
             ReadFileXML(order6, "order1.xml");
-            order3.PrintOrder();
+            order6.PrintOrder();
 
            
             Console.ReadKey();
@@ -94,9 +94,7 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
 
                         int tempPrice = Convert.ToInt32(nodestr[1]);
                         Enum.TryParse(nodestr[2], out TypeProduct tempTypeProduct);
-                        order.AddEl(new Store(nodestr[0], tempPrice, tempTypeProduct));
-                        order.PrintOrder();
-
+                        order.AddEl(new Store(nodestr[0], tempPrice, tempTypeProduct));   
                     }
                 }
                 catch (Exception ex)
