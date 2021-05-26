@@ -55,5 +55,10 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
                 w.WriteEndElement();
             }
         }
+
+        internal void AddEl(Store store)
+        {
+            OrderStores.Add(store);
+        }
     }
 }
