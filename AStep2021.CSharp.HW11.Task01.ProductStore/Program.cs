@@ -11,21 +11,14 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
         static void Main(string[] args)
         {
             List<Store> stores = new List<Store>();
-            string[] food = new[] { "Яблоко", "Картошка", "Капуста", "Хлеб", "Колбаски" };
-            AddStore(food, stores, TypeProduct.Food);
-            string[] alcohol = new[] { "Пиво", "Вино", "Водка"};
-            AddStore(alcohol, stores, TypeProduct.Alcohol);
-            string[] hygiene = new[] { "Мыло", "Шампунь", "Зубная паста", "Губка" };
-            AddStore(hygiene, stores, TypeProduct.Hygiene);
-            string[] jewelry = new[] { "Картина", "Открытка", "Ленточка" };
-            AddStore(jewelry, stores, TypeProduct.Jewelry);
-            string[] medicines = new[] { "Асперин", "Анальгин", "Витаминка", "Аскарбинка"};
-            AddStore(medicines, stores, TypeProduct.Medicines);
-
-            foreach (Store store in stores)
-            {
+            CreateStores(stores);
+            
+            foreach (Store store in stores)            
                 Console.WriteLine(store);
-            }
+
+            Order order1 = new Order;
+
+
             Console.ReadKey();
 
         }
@@ -37,6 +30,20 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
                 stores.Add(new Store(txt, rd.Next(10, 70), typeProduct));
             }
         }
+
+        static void CreateStores(List<Store> stores)
+        {
+            string[] food = new[] { "Яблоко", "Картошка", "Капуста", "Хлеб", "Колбаски" };
+            AddStore(food, stores, TypeProduct.Food);
+            string[] alcohol = new[] { "Пиво", "Вино", "Водка" };
+            AddStore(alcohol, stores, TypeProduct.Alcohol);
+            string[] hygiene = new[] { "Мыло", "Шампунь", "Зубная паста", "Губка" };
+            AddStore(hygiene, stores, TypeProduct.Hygiene);
+            string[] jewelry = new[] { "Картина", "Открытка", "Ленточка" };
+            AddStore(jewelry, stores, TypeProduct.Jewelry);
+            string[] medicines = new[] { "Асперин", "Анальгин", "Витаминка", "Аскарбинка" };
+            AddStore(medicines, stores, TypeProduct.Medicines);
+        } 
 
     }
 }
