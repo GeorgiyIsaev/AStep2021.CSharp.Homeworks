@@ -45,8 +45,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW11.Task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize", "AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize\AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize.csproj", "{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP", "CPP\CPP.vcxproj", "{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -309,16 +307,6 @@ Global
 		{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}.Release|x64.Build.0 = Release|Any CPU
 		{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}.Release|x86.ActiveCfg = Release|Any CPU
 		{70D6DBA4-3CFC-4F3D-B658-F352113B5C87}.Release|x86.Build.0 = Release|Any CPU
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Debug|x64.ActiveCfg = Debug|x64
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Debug|x64.Build.0 = Debug|x64
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Debug|x86.ActiveCfg = Debug|Win32
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Debug|x86.Build.0 = Debug|Win32
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Release|Any CPU.ActiveCfg = Release|Win32
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Release|x64.ActiveCfg = Release|x64
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Release|x64.Build.0 = Release|x64
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Release|x86.ActiveCfg = Release|Win32
-		{E7A89F2E-F5E1-4FB7-B5B9-9729B2F34114}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
