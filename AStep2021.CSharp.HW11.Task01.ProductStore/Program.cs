@@ -13,11 +13,21 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             List<Store> stores = new List<Store>();
             CreateStores(stores);
             
-            foreach (Store store in stores)            
-                Console.WriteLine(store);
+            //foreach (Store store in stores)            
+            //    Console.WriteLine(store);
 
-            Order order1 = new Order;
 
+            Order order1 = new Order("Заказ Олега:");
+            order1.NewOrderRandom(stores);
+            order1.PrintOrder();
+
+            Order order2 = new Order("Заказ Никиты:");
+            order2.NewOrderRandom(stores);
+            order2.PrintOrder();
+
+            Order order3 = new Order("Заказ Димы:");
+            order3.NewOrderRandom(stores);
+            order3.PrintOrder();
 
             Console.ReadKey();
 
