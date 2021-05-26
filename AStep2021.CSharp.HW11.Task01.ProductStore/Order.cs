@@ -8,6 +8,7 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
 {
     class Order
     {
+        static Random rd = new Random();
         string name;
         List<Store> OrderStores = new List<Store>();
         public Order(string name)
@@ -19,12 +20,13 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
 
         public void NewOrderRandom(List<Store> stores)
         {
-            Random rd = new Random();
+           // System.Threading.Thread.Sleep(100);
             int count = rd.Next(1, 9);
             while (count-- >= 0)
             {             
                 OrderStores.Add(stores[rd.Next(0, stores.Count - 1)]);
             }
+
         }
 
         public void PrintOrder()

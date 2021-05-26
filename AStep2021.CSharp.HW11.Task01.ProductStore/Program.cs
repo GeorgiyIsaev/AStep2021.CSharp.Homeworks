@@ -20,11 +20,11 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             Order order1 = new Order("Заказ Олега:");
             order1.NewOrderRandom(stores);
             order1.PrintOrder();
-
+           
             Order order2 = new Order("Заказ Никиты:");
             order2.NewOrderRandom(stores);
             order2.PrintOrder();
-
+            
             Order order3 = new Order("Заказ Димы:");
             order3.NewOrderRandom(stores);
             order3.PrintOrder();
