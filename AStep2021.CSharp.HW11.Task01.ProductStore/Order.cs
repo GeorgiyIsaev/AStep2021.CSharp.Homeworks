@@ -17,13 +17,13 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             this.name = name;
         }
 
-       
+
 
         public void NewOrderRandom(List<Store> stores)
-        {          
+        {
             int count = rd.Next(1, 9);
             while (count-- >= 0)
-            {             
+            {
                 OrderStores.Add(stores[rd.Next(0, stores.Count - 1)]);
             }
 
@@ -34,27 +34,26 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             Console.WriteLine(name);
             foreach (Store store in OrderStores)
                 Console.WriteLine(store);
-            Console.WriteLine(); 
-
+            Console.WriteLine();
         }
 
-        public void XmlTextWriterToFile()
+        public void XmlTextWriterToFile(string namefile)
         {
-
-            foreach (Store store in OrderStores)
+            using (XmlTextWriter w = new XmlTextWriter(namefile, System.Text.Encoding.Unicode))
             {
-                using (XmlTextWriter w = new XmlTextWriter(Console.Out))
+                w.Formatting = Formatting.Indented;
+                w.WriteStartDocument();
+                w.WriteStartElement("OrderStores");
+                foreach (Store store in OrderStores)
                 {
-                    w.WriteStartElement(store.Name);
+                    w.WriteStartElement("store");
+                    w.WriteElementString("Name", store.Name);
+                    w.WriteElementString("Price", store.Price.ToString());
+                    w.WriteElementString("TypeProduct", store.TypeProduct.ToString());
                     w.WriteEndElement();
-                    w.WriteStartElement(store.Price.ToString());
-                    w.WriteEndElement();
-                    w.WriteStartElement(store.TypeProduct.ToString());
-                    w.WriteEndElement();                   
                 }
+                w.WriteEndElement();
             }
-
         }
-
     }
 }
