@@ -34,6 +34,5 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             string temp = $"Тип товара: {TypeProduct}; Название: {Name}; Цена {Price} ";
             return temp;        
         }
-
     }
 }

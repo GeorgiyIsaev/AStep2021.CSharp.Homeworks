@@ -17,8 +17,6 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             this.name = name;
         }
 
-
-
         public void NewOrderRandom(List<Store> stores)
         {
             int count = rd.Next(1, 9);

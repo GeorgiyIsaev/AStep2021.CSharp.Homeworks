@@ -42,11 +42,10 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             Order order6 = new Order("Заказ из ХМL order1:");
             ReadFileXML(order6, "order1.xml");
             order6.PrintOrder();
-
            
             Console.ReadKey();
-
         }
+
         static void AddStore(string[] masNameProduct, List<Store> stores, TypeProduct typeProduct)
         {
             Random rd = new Random();
@@ -55,7 +54,6 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
                 stores.Add(new Store(txt, rd.Next(10, 70), typeProduct));
             }
         }
-
         static void CreateStores(List<Store> stores)
         {
             string[] food = new[] { "Яблоко", "Картошка", "Капуста", "Хлеб", "Колбаски" };
@@ -69,8 +67,7 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             string[] medicines = new[] { "Асперин", "Анальгин", "Витаминка", "Аскарбинка" };
             AddStore(medicines, stores, TypeProduct.Medicines);
         } 
-
-     
+                
         static void ReadFileXML(Order order, string namefile)
         {
             List<string> nodestr;        
@@ -102,7 +99,7 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
                     Console.WriteLine("Невозможно считать нод");
                     Console.WriteLine(ex.Message);
                 }   
-            }                   
+            }          
         }
     }
 }
