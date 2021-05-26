@@ -29,6 +29,11 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
         public int Price { get; set; }
         internal TypeProduct TypeProduct { get; set; }
 
+        public override string ToString()
+        {
+            string temp = $"Тип товара: {TypeProduct}; Название: {Name}; Цена {Price} ";
+            return temp;        
+        }
 
     }
 }
