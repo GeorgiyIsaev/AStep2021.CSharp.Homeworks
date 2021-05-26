@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace AStep2021.CSharp.HW11.Task01.ProductStore
 {
@@ -28,6 +29,9 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             Order order3 = new Order("Заказ Димы:");
             order3.NewOrderRandom(stores);
             order3.PrintOrder();
+            order3.XmlTextWriterToFile();
+
+
 
             Console.ReadKey();
 

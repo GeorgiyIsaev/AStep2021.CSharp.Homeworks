@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace AStep2021.CSharp.HW11.Task01.ProductStore
 {
@@ -19,8 +20,7 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
        
 
         public void NewOrderRandom(List<Store> stores)
-        {
-           // System.Threading.Thread.Sleep(100);
+        {          
             int count = rd.Next(1, 9);
             while (count-- >= 0)
             {             
@@ -34,7 +34,27 @@ namespace AStep2021.CSharp.HW11.Task01.ProductStore
             Console.WriteLine(name);
             foreach (Store store in OrderStores)
                 Console.WriteLine(store);
-            Console.WriteLine();
+            Console.WriteLine(); 
+
         }
+
+        public void XmlTextWriterToFile()
+        {
+
+            foreach (Store store in OrderStores)
+            {
+                using (XmlTextWriter w = new XmlTextWriter(Console.Out))
+                {
+                    w.WriteStartElement(store.Name);
+                    w.WriteEndElement();
+                    w.WriteStartElement(store.Price.ToString());
+                    w.WriteEndElement();
+                    w.WriteStartElement(store.TypeProduct.ToString());
+                    w.WriteEndElement();                   
+                }
+            }
+
+        }
+
     }
 }
