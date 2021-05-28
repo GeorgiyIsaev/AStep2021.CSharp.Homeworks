@@ -32,8 +32,8 @@ namespace AStep2021.CSharp.HW06.Task01.InterfaicePrintForms
             int count = 1;
             foreach (Forms.Form form in forms)
             {
-                Console.WriteLine((count++) + ". " + form.Name +
-                    " P=" + Math.Round(form.PForm()) + " S=" + Math.Round(form.SForm()));
+                Console.Write((count++) + ". ");
+                form.Print();
             }
         }
         public static void CreateForm()
