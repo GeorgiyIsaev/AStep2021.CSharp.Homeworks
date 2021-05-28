@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing; //подключил в ссылках
 using System.Windows.Forms; //подключил в ссылках
-using Windows.Graphics.Display;
 
 
 namespace AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize
@@ -25,7 +24,7 @@ namespace AStep2021.CSharp.HW12.Task01.MonitorDiagonalSize
             Console.WriteLine($"Вер2: Ширина монитора: {intWidth} px, Высота: {intHeight} px ");
 
             double dioganal = Math.Sqrt(Math.Pow(intWidth, 2) + Math.Pow(intHeight, 2));
-            Console.WriteLine($"Диаганаль экрана: {Math.Round(dioganal, 2)} пикселей"); //Round обрезать число        
+            Console.WriteLine($"Диаганаль экрана: {Math.Round(dioganal, 2)} пикселей"); //Round обрезать число       
 
         }     
     }

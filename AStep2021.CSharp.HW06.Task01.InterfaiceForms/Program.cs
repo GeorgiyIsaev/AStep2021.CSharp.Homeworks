@@ -10,9 +10,22 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
     {
         static void Main(string[] args)
         {
-            //SimpleAngle simpleAngle = new SimpleAngle(5, 20);
+            List<Form> forms = new List<Form>();
+            forms.Add(new Circle(10));
+            forms.Add(new Ellipse(10, 10));
+            forms.Add(new Parallelogram(10, 10, 2));
+            forms.Add(new Rectangle(10, 10));
+            forms.Add(new Rectangle(10, 10));
+            forms.Add(new Square(10));
+            forms.Add(new Trapezoid(10, 10, 10, 10));
+            forms.Add(new Triangle(10, 10, 10));
 
-            //simpleAngle.Print(); 
+            foreach (Form form in forms)
+            {
+                form.Print();
+            }
+
+
             Console.ReadKey();
         }
     }
