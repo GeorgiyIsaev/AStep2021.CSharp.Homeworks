@@ -43,11 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\Circle.cs" />
+    <Compile Include="forms\CompositeForm.cs" />
+    <Compile Include="forms\Ellipse.cs" />
+    <Compile Include="forms\Form.cs" />
+    <Compile Include="forms\ISimpleAngle.cs" />
+    <Compile Include="forms\Parallelogram.cs" />
+    <Compile Include="forms\Rectangle.cs" />
+    <Compile Include="forms\Rhombus.cs" />
+    <Compile Include="forms\Square.cs" />
+    <Compile Include="forms\Trapezoid.cs" />
+    <Compile Include="forms\Triangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="HomeWork06.Interface.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

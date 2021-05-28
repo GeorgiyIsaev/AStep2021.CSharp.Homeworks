@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompositeForm.cs" />
-    <Compile Include="Form.cs" />
+    <Compile Include="forms\CompositeForm.cs" />
+    <Compile Include="forms\Form.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="forms\Square.cs" />

@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompositeForm.cs" />
-    <Compile Include="Form.cs" />
+    <Compile Include="forms\CompositeForm.cs" />
+    <Compile Include="forms\Form.cs" />
     <Compile Include="forms\Circle.cs" />
     <Compile Include="forms\Ellipse.cs" />
     <Compile Include="forms\Parallelogram.cs" />
@@ -55,7 +55,7 @@
     <Compile Include="forms\Triangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleAngle.cs" />
+    <Compile Include="forms\ISimpleAngle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
