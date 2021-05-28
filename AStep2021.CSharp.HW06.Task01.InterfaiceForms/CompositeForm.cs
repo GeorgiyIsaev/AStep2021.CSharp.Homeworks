@@ -15,7 +15,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         public void addForm(Form form){
             compositeForm.Add(form);
         }
-        public override void Print()
+        public void PrintContents()
         {
             Console.WriteLine("Композитная фигура состоит из: ");
             int count = 1;

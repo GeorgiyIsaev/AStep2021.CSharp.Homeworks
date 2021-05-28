@@ -19,6 +19,9 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             forms.Add(new Square(10));
             forms.Add(new Trapezoid(10, 10, 10, 10));
             forms.Add(new Triangle(10, 10, 10));
+            CompositeForm compForm = new CompositeForm();
+            compForm.RandomContent();
+            forms.Add(compForm);
 
             foreach (Form form in forms)
             {
