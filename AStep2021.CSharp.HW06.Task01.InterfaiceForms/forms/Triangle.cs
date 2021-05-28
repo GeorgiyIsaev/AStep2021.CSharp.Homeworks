@@ -29,10 +29,31 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         int CA;
         public Triangle(int AB,int BC,int CA)
         {
+            if (AB < 0 || BC < 0 || CA < 0) throw new ApplicationException("Значения для сторон триугольника должны быть больше нуля!");
+                     
+
             this.AB = AB;
             this.BC= BC;
             this.CA= CA;
             name = "Треугольник";
+        }
+
+        private void CheckingForExistence(int AB, int BC, int CA)
+        {
+            if (AB > BC && AB > CA) {
+                if (AB > (BC + CA))
+                    throw new ApplicationException("Сторона АВ в треугольнику больше сумму двух других сторон!");
+            }
+            else if (BC > AB && BC > CA)
+            {
+                if (BC > (AB + CA))
+                    throw new ApplicationException("Сторона BC в треугольнику больше сумму двух других сторон!");
+            }
+            else if (CA > AB && CA > BC)
+            {
+                if (CA > (AB + BC))
+                    throw new ApplicationException("Сторона CA в треугольнику больше сумму двух других сторон!");
+            }
         }
 
         public override double PForm()

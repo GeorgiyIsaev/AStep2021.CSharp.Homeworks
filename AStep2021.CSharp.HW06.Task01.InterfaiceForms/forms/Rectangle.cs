@@ -28,6 +28,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         int CD;     
         public Rectangle(int AB,int CD)
         {
+            if (AB < 0 || CD < 0) throw new ApplicationException("Значения для сторон прямоугольника должны быть больше нуля!");
             this.AB = AB;
             this.CD = CD;          
             name = "Прямоугольник";

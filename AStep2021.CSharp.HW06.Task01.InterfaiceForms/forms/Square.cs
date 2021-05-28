@@ -29,6 +29,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
 
         public Square(int AB)
         {
+            if (AB < 0) throw new ApplicationException("Значения для сторон квадрата должны быть больше нуля!");
             this.AB = AB;
             name = "Квадрат";
         }

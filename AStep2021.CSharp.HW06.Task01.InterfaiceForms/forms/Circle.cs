@@ -27,6 +27,8 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         int R;   
         public Circle(int R)
         {
+            if (R<0) throw new ApplicationException("Радиус круга не может быть меньше нуля");
+
             this.R = R;
             name = "Круг";
         }
