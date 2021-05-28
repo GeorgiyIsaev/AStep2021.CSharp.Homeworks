@@ -10,9 +10,9 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
     {
         static void Main(string[] args)
         {
-            SimpleAngle simpleAngle = new SimpleAngle(5, 20);
+            //SimpleAngle simpleAngle = new SimpleAngle(5, 20);
 
-            simpleAngle.Print(); 
+            //simpleAngle.Print(); 
             Console.ReadKey();
         }
     }

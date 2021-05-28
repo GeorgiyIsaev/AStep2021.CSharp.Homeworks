@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AStep2021.CSharp.HW06.Task01.Forms
 {
-    abstract class Form
+    abstract class Form : ISimpleAngle
     {
         protected string name = "Фигура";
         public string Name => name;
