@@ -36,6 +36,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             if (AB < 0 || CD < 0) throw new ApplicationException("Значения для сторон паралелограмма должны быть больше нуля!");
             if (h < 0) throw new ApplicationException("Высота паралелограмма должна быть больше нуля");
             name = "Параллелограмм";
+            ColorInit();
         }
         public Parallelogram(int AB,int CD, int h)
         {

@@ -30,6 +30,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             R = ReadInt("Введите радиус круга: ");
             if (R < 0) throw new ApplicationException("Радиус круга не может быть меньше нуля");
             name = "Круг";
+            ColorInit();
         } 
 
         public Circle(int R)

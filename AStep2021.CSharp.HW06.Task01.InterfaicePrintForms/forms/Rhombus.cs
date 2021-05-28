@@ -34,6 +34,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             if (AB < 0) throw new ApplicationException("Значения для сторон ромба должны быть больше нуля!");
             if (h < 0) throw new ApplicationException("Высота ромба должна быть больше нуля");
             name = "Ромб";
+            ColorInit();
         }
         public Rhombus(int AB,int h)
         {

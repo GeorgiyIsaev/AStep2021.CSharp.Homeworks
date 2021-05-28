@@ -17,6 +17,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             name = "Композитная Фигура";
             if (countForm <= 2) throw new ApplicationException("Композитная фигура должна состоять хотябы из двух фигур!");
             RandomContent(countForm);
+            ColorInit();
         }
 
         public void addForm(Form form){

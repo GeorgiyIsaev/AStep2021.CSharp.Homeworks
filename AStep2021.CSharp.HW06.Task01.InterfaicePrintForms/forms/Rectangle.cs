@@ -33,6 +33,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             CD = ReadInt("Введите сторону CD: ");
             if (AB < 0 || CD < 0) throw new ApplicationException("Значения для сторон прямоугольника должны быть больше нуля!");
             name = "Прямоугольник";
+            ColorInit();
         }
         public Rectangle(int AB,int CD)
         {

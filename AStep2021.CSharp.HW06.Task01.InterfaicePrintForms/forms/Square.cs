@@ -31,6 +31,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             AB = ReadInt("Введите сторону АВ: ");       
             if (AB < 0) throw new ApplicationException("Значения для сторон квадрата должны быть больше нуля!");
             name = "Квадрат";
+            ColorInit();
         }
 
         public Square(int AB)

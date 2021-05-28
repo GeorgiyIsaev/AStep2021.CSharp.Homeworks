@@ -26,7 +26,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         {
             Console.WriteLine("\n--Выберете цвет фигуры--");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("1 - Зеленый в желтом");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.BackgroundColor = ConsoleColor.Blue;
@@ -60,7 +60,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             {
                 case '1':                  
                     foregroundColor = ConsoleColor.Green; 
-                    backgroundColor = ConsoleColor.Yellow;
+                    backgroundColor = ConsoleColor.DarkYellow;
                     break;
                 case '2':
                     foregroundColor = ConsoleColor.Red;

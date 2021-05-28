@@ -34,7 +34,8 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             BC = ReadInt("Введите сторону BC: ");
             CA = ReadInt("Введите сторону CA: ");            
             if (AB < 0 || BC < 0 || CA < 0) throw new ApplicationException("Значения для сторон триугольника должны быть больше нуля!");
-            CheckingForExistence(AB, BC, CA);          
+            CheckingForExistence(AB, BC, CA);
+            ColorInit();
             name = "Треугольник";
         }
         public Triangle(int AB,int BC,int CA)

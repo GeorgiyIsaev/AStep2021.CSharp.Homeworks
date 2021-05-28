@@ -37,6 +37,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             DA = ReadInt("Введите сторону DA: ");
             if (AB < 0 || BC < 0 || CD < 0 || DA < 0) throw new ApplicationException("Значения для сторон трапеции должны быть больше нуля!");
             name = "Трапеция";
+            ColorInit();
         }
 
 
