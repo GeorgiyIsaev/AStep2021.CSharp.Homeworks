@@ -36,7 +36,6 @@ namespace AStep2021.CSharp.HW06.Task01.InterfaicePrintForms
                         break;
                 }
             }
-
         }
     }
 }

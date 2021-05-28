@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectionForms.cs" />
     <Compile Include="forms\Circle.cs" />
     <Compile Include="forms\CompositeForm.cs" />
     <Compile Include="forms\Ellipse.cs" />
