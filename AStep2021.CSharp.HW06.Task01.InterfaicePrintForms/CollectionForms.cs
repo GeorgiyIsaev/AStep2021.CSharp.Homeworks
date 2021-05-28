@@ -11,7 +11,7 @@ namespace AStep2021.CSharp.HW06.Task01.InterfaicePrintForms
         static List<Forms.Form> forms = new List<Forms.Form>();
 
         public static void Add(Forms.Form form)
-        {            
+        {         
             forms.Add(form);
         }
         public static void DelleteID(int val)
@@ -51,46 +51,43 @@ namespace AStep2021.CSharp.HW06.Task01.InterfaicePrintForms
             ConsoleKeyInfo param = Console.ReadKey();
             Console.Clear();
 
-            switch (param.KeyChar)
+            try
             {
-                case '1':
-                    forms.Add(new Forms.Circle());
-                    break;
-                case '2':                    
-                    forms.Add(new Forms.Ellipse();
-                    break;
-                case '3':
-                    int h = ReadInt("Введите высоту для паралелограмма: ");
-                    int AB = ReadInt("Введите размер стороны АВ: ");
-                    int CD = ReadInt("Введите размер стороны CD: ");                  
-                    forms.Add(new Forms.Parallelogram(10, 10, 2));
-                    break;
-                case '4':
-                    Console.WriteLine("Укажите размер строн для прямоугольника");
-                    int ABR = ReadInt("Введите размер стороны АВ: ");
-                    int CDR = ReadInt("Введите размер стороны CD: ");
-                    forms.Add(new Forms.Rectangle(ABR, CDR));
-                    break;
-                case '5':
-                    Console.WriteLine("Укажите размер строн для ромба:");
-                    int ABr = ReadInt("Введите размер стороны АВ: ");
-                    int CDr = ReadInt("Введите размер стороны CD: ");
-                    forms.Add(new Forms.Rhombus(ABr, CDr)); 
-                    break;
-                case '6':
-                    forms.Add(new Forms.Square(10));
-                    break;
-                case '7':
-                    forms.Add(new Forms.Trapezoid(10, 10, 10, 10));
-                    break;
-                case '8':
-                    forms.Add(new Forms.Triangle(10, 5, 10));
-                    break;
-                case '9':
-                    Forms.CompositeForm compForm = new Forms.CompositeForm();
-                    compForm.RandomContent();
-                    forms.Add(compForm);
-                    break;
+                switch (param.KeyChar)
+                {
+                    case '1':
+                        forms.Add(new Forms.Circle());
+                        break;
+                    case '2':
+                        forms.Add(new Forms.Ellipse());
+                        break;
+                    case '3':
+                        forms.Add(new Forms.Parallelogram());
+                        break;
+                    case '4':
+                        forms.Add(new Forms.Rectangle());
+                        break;
+                    case '5':
+                        forms.Add(new Forms.Rhombus());
+                        break;
+                    case '6':
+                        forms.Add(new Forms.Square());
+                        break;
+                    case '7':
+                        forms.Add(new Forms.Trapezoid());
+                        break;
+                    case '8':
+                        forms.Add(new Forms.Triangle());
+                        break;
+                    case '9':
+                        int count = ReadInt("Колличество рандомных фигур в композитной фигуре: ");
+                        forms.Add(new Forms.CompositeForm(count));
+                        break;
+                }
+            }
+            catch(Exception ex) {
+                Console.WriteLine("ERROR!! Фигура не добавлена!");
+                Console.WriteLine(ex.Message); 
             }
         }
         public static int ReadInt(string nameval = "-> ")

@@ -22,11 +22,11 @@ namespace AStep2021.CSharp.HW06.Task01.InterfaicePrintForms
                 switch (param.KeyChar)
                 {
                     case '1': // Добавление новой фигуры
-                        CollectionForms.DelleteID(0);
+                        CollectionForms.CreateForm();
                         Console.WriteLine("1 - Добавить фигуру");
                         break;
                     case '2': // Удаление фигуры по номеру добавления                      
-                        CollectionForms.DelleteID(0);
+                        CollectionForms.DelleteID(CollectionForms.ReadInt("Укажите номер фигуры для удаления: "));
                         Console.WriteLine("2 - Удалить фигуру");
                         break;
                     case '3': //Вывод данных фигур
