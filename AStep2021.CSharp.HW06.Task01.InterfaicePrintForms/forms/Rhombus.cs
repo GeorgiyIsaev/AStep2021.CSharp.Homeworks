@@ -26,6 +26,15 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
 
         int AB;     
         int h;
+        public Rhombus()
+        {
+            Console.WriteLine("Укажите значения для ромба:");
+            AB = ReadInt("Введите сторону АВ: ");
+            h = ReadInt("Введите высоту ромба: ");
+            if (AB < 0) throw new ApplicationException("Значения для сторон ромба должны быть больше нуля!");
+            if (h < 0) throw new ApplicationException("Высота ромба должна быть больше нуля");
+            name = "Ромб";
+        }
         public Rhombus(int AB,int h)
         {
             if (AB < 0 ) throw new ApplicationException("Значения для сторон ромба должны быть больше нуля!");
@@ -33,8 +42,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
 
             this.AB = AB;
             this.h= h;
-            name = "Ромб";
-          
+            name = "Ромб";          
         }
 
         public override double PForm()

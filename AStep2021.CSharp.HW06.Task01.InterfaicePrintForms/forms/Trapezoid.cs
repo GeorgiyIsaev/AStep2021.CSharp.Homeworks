@@ -28,6 +28,17 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         int BC;
         int CD;
         int DA;
+        public Trapezoid()
+        {
+            Console.WriteLine("Укажите размеры строн триугольнка:");
+            AB = ReadInt("Введите сторону АВ: ");
+            BC = ReadInt("Введите сторону BC: ");
+            CD = ReadInt("Введите сторону CD: ");
+            DA = ReadInt("Введите сторону DA: ");
+            if (AB < 0 || BC < 0 || CD < 0 || DA < 0) throw new ApplicationException("Значения для сторон трапеции должны быть больше нуля!");
+            name = "Трапеция";
+        }
+
 
         public Trapezoid(int AB,int BC,int CD, int DA)
         {

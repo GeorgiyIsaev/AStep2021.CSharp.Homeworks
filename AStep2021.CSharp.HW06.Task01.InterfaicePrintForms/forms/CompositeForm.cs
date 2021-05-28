@@ -10,7 +10,14 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
     {
         List<Form> compositeForm = new List<Form>();
 
-        public CompositeForm() { name = "Композитная Фигура"; }
+        public CompositeForm() {
+            name = "Композитная Фигура";         
+        }
+        public CompositeForm(int countForm) { 
+            name = "Композитная Фигура";
+            if (countForm <= 2) throw new ApplicationException("Композитная фигура должна состоять хотябы из двух фигур!");
+            RandomContent(countForm);
+        }
 
         public void addForm(Form form){
             compositeForm.Add(form);
@@ -48,10 +55,9 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             return square;
         }
 
-        public void RandomContent()
+        public void RandomContent(int count)
         {
-            Random random = new Random();
-            int count = random.Next(1, 10);
+            Random random = new Random();          
             while (count-- >= 0)
             {
                 int val = random.Next(1, 8);

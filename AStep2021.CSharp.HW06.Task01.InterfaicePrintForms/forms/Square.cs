@@ -25,7 +25,13 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
          * Эллипс     * Ellipse*/
 
         int AB;
-
+        public Square()
+        {
+            Console.WriteLine("Укажите размеры строн квадрата:");
+            AB = ReadInt("Введите сторону АВ: ");       
+            if (AB < 0) throw new ApplicationException("Значения для сторон квадрата должны быть больше нуля!");
+            name = "Квадрат";
+        }
 
         public Square(int AB)
         {

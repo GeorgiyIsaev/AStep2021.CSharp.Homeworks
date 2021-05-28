@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AStep2021.CSharp.HW06.Task01.Forms
 {
-    abstract class Form : ISimpleAngle
+    abstract public class Form : ISimpleAngle
     {
         protected string name = "Фигура";
         public string Name => name;
@@ -17,6 +17,21 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         {
             Console.WriteLine(Name +" P=" + Math.Round(PForm()) + " S=" + Math.Round(SForm()));
             
+        }
+        protected int ReadInt(string nameval = "-> ")
+        {
+            int val;
+            try
+            {
+                Console.Write(nameval);
+                val = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("ERROR!! Требуется ввести число!");
+                val = ReadInt(nameval);
+            }
+            return val;
         }
     }
 }

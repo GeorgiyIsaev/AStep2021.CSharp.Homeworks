@@ -25,7 +25,15 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
          * Эллипс     * Ellipse*/
 
         int halfAxisA;
-        int halfAxisB;     
+        int halfAxisB;
+        public Ellipse()
+        {
+            halfAxisA = ReadInt("Введите радиус первой полуОси элипса: ");
+            halfAxisB = ReadInt("Введите радиус второй полуОси элипса: ");
+            if (halfAxisA < 0 || halfAxisB < 0) throw new ApplicationException("Значения полурадиусов для овала не могут быть меньше нуля");
+            name = "Элипс";
+        }
+
         public Ellipse(int halfAxisA, int halfAxisB)
         {
             if (halfAxisA < 0 || halfAxisB <0) throw new ApplicationException("Значения полурадиусов для овала не могут быть меньше нуля");

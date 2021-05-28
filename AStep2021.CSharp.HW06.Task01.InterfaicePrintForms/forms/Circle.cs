@@ -24,7 +24,14 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
    
          * Эллипс     * Ellipse*/
 
-        int R;   
+        int R;  
+        public Circle()
+        {
+            R = ReadInt("Введите радиус круга: ");
+            if (R < 0) throw new ApplicationException("Радиус круга не может быть меньше нуля");
+            name = "Круг";
+        } 
+
         public Circle(int R)
         {
             if (R<0) throw new ApplicationException("Радиус круга не может быть меньше нуля");

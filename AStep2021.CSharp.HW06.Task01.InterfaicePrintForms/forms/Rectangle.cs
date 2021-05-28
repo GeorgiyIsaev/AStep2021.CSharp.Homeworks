@@ -25,7 +25,15 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
          * Эллипс     * Ellipse*/
 
         int AB;
-        int CD;     
+        int CD;
+        public Rectangle()
+        { 
+            Console.WriteLine("Укажите размеры строн прямоугольника:");
+            AB = ReadInt("Введите сторону АВ: ");
+            CD = ReadInt("Введите сторону CD: ");
+            if (AB < 0 || CD < 0) throw new ApplicationException("Значения для сторон прямоугольника должны быть больше нуля!");
+            name = "Прямоугольник";
+        }
         public Rectangle(int AB,int CD)
         {
             if (AB < 0 || CD < 0) throw new ApplicationException("Значения для сторон прямоугольника должны быть больше нуля!");

@@ -17,17 +17,20 @@ namespace AStep2021.CSharp.HW06.Task01.InterfaicePrintForms
                 Console.WriteLine("2 - Удалить фигуру");
                 Console.WriteLine("3 - Отоброзить выбранные фигуры");
                 Console.WriteLine("4 - Выход");
-                ConsoleKeyInfo test = Console.ReadKey();
+                ConsoleKeyInfo param = Console.ReadKey();
                 Console.Clear();
-                switch (test.KeyChar)
+                switch (param.KeyChar)
                 {
                     case '1': // Добавление новой фигуры
+                        CollectionForms.DelleteID(0);
                         Console.WriteLine("1 - Добавить фигуру");
                         break;
-                    case '2': // Удаление фигуры по номеру добавления
+                    case '2': // Удаление фигуры по номеру добавления                      
+                        CollectionForms.DelleteID(0);
                         Console.WriteLine("2 - Удалить фигуру");
                         break;
                     case '3': //Вывод данных фигур
+                        CollectionForms.PrintContents();
                         Console.WriteLine("3 - Отоброзить выбранные фигуры");
                         break;
                     case '4':
