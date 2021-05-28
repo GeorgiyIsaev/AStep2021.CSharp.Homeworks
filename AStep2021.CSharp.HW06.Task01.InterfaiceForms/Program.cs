@@ -20,7 +20,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
                 forms.Add(new Rectangle(10, 10));
                 forms.Add(new Square(10));
                 forms.Add(new Trapezoid(10, 10, 10, 10));
-                forms.Add(new Triangle(10, 25, 10));
+                forms.Add(new Triangle(10, 5, 10));
                 CompositeForm compForm = new CompositeForm();
                 compForm.RandomContent();
                 forms.Add(compForm);
@@ -34,9 +34,6 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             {
                 form.Print();
             }
-
-
-
             Console.ReadKey();
         }
     }
