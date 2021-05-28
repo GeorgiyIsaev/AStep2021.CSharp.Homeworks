@@ -47,5 +47,41 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             }
             return square;
         }
+
+        public void RandomContent()
+        {
+            Random random = new Random();
+            int count = random.Next(1, 10);
+            while (count-- >= 0)
+            {
+                int val = random.Next(1, 8);
+                switch (val)
+                {
+                    case 1:  addForm(new Forms.Circle(10));
+                        break;
+                    case 2:
+                        addForm(new Forms.Ellipse(10, 10));
+                        break;
+                    case 3:
+                        addForm(new Forms.Parallelogram(10, 10, 2));
+                        break;
+                    case 4:
+                        addForm(new Forms.Rectangle(10, 10));
+                        break;
+                    case 5:
+                        addForm(new Forms.Rhombus(10, 5));
+                        break;
+                    case 6:
+                        addForm(new Forms.Square(10));
+                        break;
+                    case 7:
+                        addForm(new Forms.Trapezoid(10, 10, 10, 10));
+                        break;
+                    case 8:
+                        addForm(new Forms.Triangle(10, 10, 10));
+                        break;
+                }
+            }
+        }
     }
 }
