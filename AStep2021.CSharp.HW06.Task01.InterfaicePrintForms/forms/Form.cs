@@ -22,7 +22,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             Console.WriteLine(Name +" P=" + Math.Round(PForm()) + " S=" + Math.Round(SForm()));
             Console.ResetColor();
         }
-        protected void ColorInit()
+        protected void ToColorColorInit()
         {
             Console.WriteLine("\n--Выберете цвет фигуры--");
             Console.ForegroundColor = ConsoleColor.Green;
@@ -95,6 +95,39 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
                     backgroundColor = ConsoleColor.DarkGreen;
                     break;
             }
+
+        }
+
+        public void ColorInit()
+        {
+            Console.WriteLine("\n--Выберете фон фигуры--");
+                       
+            for (int i=0; i < 15; i++)
+            {
+                Console.Write(i + ".\t- ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = (ConsoleColor)i;            
+                if(i>9) Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine(" ФОН ");
+                Console.ResetColor();
+            }
+            int val = ReadInt();
+            if (val > 0 && val <=15)
+                backgroundColor = (ConsoleColor)val;
+
+            Console.WriteLine("\n--Выберете шрифт фигуры--");
+                       
+            for (int i = 0; i < 15; i++)
+            {
+                Console.Write(i + ".\t- ");
+                Console.BackgroundColor = backgroundColor;
+                Console.ForegroundColor = (ConsoleColor)i;             
+                Console.WriteLine(" ШРИФТ ");
+                Console.ResetColor();
+            }
+            val = ReadInt();
+            if (val > 0 && val <= 15)
+               foregroundColor = (ConsoleColor)val;
 
         }
 
