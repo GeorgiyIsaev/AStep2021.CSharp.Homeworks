@@ -38,6 +38,14 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             name = "Параллелограмм";
             ColorInit();
         }
+        public override void Point()
+        {
+            Console.WriteLine("        ********* "); 
+            Console.WriteLine("     *********    ");
+            Console.WriteLine("  *********       ");
+            Console.WriteLine("*********         ");       
+        }
+
         public Parallelogram(int AB,int CD, int h)
         {
             if (AB < 0 || CD < 0) throw new ApplicationException("Значения для сторон паралелограмма должны быть больше нуля!");

@@ -33,6 +33,13 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             name = "Квадрат";
             ColorInit();
         }
+        public override void Point()
+        {
+            Console.WriteLine("*******");
+            Console.WriteLine("*******");
+            Console.WriteLine("*******");
+            Console.WriteLine("*******");
+        }
 
         public Square(int AB)
         {

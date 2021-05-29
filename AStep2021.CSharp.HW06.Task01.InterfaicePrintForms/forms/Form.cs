@@ -18,10 +18,16 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         public virtual void Print()
         {
             Console.ForegroundColor = foregroundColor;
-            Console.BackgroundColor = backgroundColor;
+            Console.BackgroundColor = backgroundColor;         
             Console.WriteLine(Name +" P=" + Math.Round(PForm()) + " S=" + Math.Round(SForm()));
+            Point();
             Console.ResetColor();
-        }    
+        }
+        public virtual void Point()
+        {      
+            Console.Write("");          
+        }
+
         public void ColorInit()
         {
             Console.WriteLine("\n--Выберете фон фигуры--");

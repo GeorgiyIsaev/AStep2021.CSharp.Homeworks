@@ -38,6 +38,17 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             ColorInit();
             name = "Треугольник";
         }
+        public override void Point()
+        {
+            Console.WriteLine("*");
+            Console.WriteLine("***");
+            Console.WriteLine("*****");
+            Console.WriteLine("********");
+            Console.WriteLine("***********");
+        }
+
+
+
         public Triangle(int AB,int BC,int CA)
         {
             if (AB < 0 || BC < 0 || CA < 0) throw new ApplicationException("Значения для сторон триугольника должны быть больше нуля!");

@@ -35,6 +35,15 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             name = "Прямоугольник";
             ColorInit();
         }
+        public override void Point()
+        {
+            Console.WriteLine("****************");
+            Console.WriteLine("****************");
+            Console.WriteLine("****************");
+            Console.WriteLine("****************");
+        }
+
+
         public Rectangle(int AB,int CD)
         {
             if (AB < 0 || CD < 0) throw new ApplicationException("Значения для сторон прямоугольника должны быть больше нуля!");

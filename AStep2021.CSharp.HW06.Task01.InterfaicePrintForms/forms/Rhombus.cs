@@ -36,6 +36,14 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             name = "Ромб";
             ColorInit();
         }
+        public override void Point()
+        {
+            Console.WriteLine("     **      ");
+            Console.WriteLine("  *********  ");
+            Console.WriteLine("*************");
+            Console.WriteLine("  *********  ");
+            Console.WriteLine("     **      ");
+        }
         public Rhombus(int AB,int h)
         {
             if (AB < 0 ) throw new ApplicationException("Значения для сторон ромба должны быть больше нуля!");

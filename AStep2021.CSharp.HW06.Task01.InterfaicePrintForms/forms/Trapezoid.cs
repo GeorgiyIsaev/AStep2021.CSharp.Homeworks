@@ -30,7 +30,7 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
         int DA;
         public Trapezoid()
         {
-            Console.WriteLine("Укажите размеры строн триугольнка:");
+            Console.WriteLine("Укажите размеры строн трапеции:");
             AB = ReadInt("Введите сторону АВ: ");
             BC = ReadInt("Введите сторону BC: ");
             CD = ReadInt("Введите сторону CD: ");
@@ -38,6 +38,13 @@ namespace AStep2021.CSharp.HW06.Task01.Forms
             if (AB < 0 || BC < 0 || CD < 0 || DA < 0) throw new ApplicationException("Значения для сторон трапеции должны быть больше нуля!");
             name = "Трапеция";
             ColorInit();
+        }
+        public override void Point()
+        {
+            Console.WriteLine("   *********         ");
+            Console.WriteLine("  ************       ");
+            Console.WriteLine(" *****************   ");
+            Console.WriteLine("*********************");         
         }
 
 
